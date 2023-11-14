@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mon labo</title>
+    <!-- Favicon icon -->
+    <link href="/Monlabo/public/css/style.css" rel="stylesheet">
+    <link href="/Monlabo/public/css/custom.css" rel="stylesheet">
+    <link href="/Monlabo/public/css/fontsaps.css" rel="stylesheet">
+    <link href="/Monlabo/public/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="/Monlabo/public/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body style="margin: 0px;">
+
+    <header class="header-menu">
+        <div class="container nav2">
+          <h1 class="logo">
+            <img src="/Monlabo/public/images/logo-SAAS.png" alt="" style="height: 35px;"/>
+          </h1>
+          <button onclick="menu()" class="menu_open"><i class="bi bi-list-nested"></i></button>
+  
+          <div class="m_menu">
+            <button onclick="menu()" class="menu_close">&times;</button>
+            <ul class="normal">
+              <li class="menu_o">
+                <a class="lang_checked"><img src="/Monlabo/public/images/Icons-OJ.png" alt="" style="height: 20px;"> FR <span class="bi bi-chevron-down"></span></a>
+                <ul class="down-menu" style="padding: 0px;">
+                  <li><a href="">Français</a></li>
+                  <li><a href="">Anglais</a></li>
+                </ul>
+              </li>
+              <li><a href="" class="active" style="padding: 5px 10px;">Ressources</a></li>
+              <li><a href="" class="active" style="padding: 5px 10px;">Contact</a></li>
+            </ul>
+            <ul class="user">
+              <li><a class="button signin" href="/Monlabo/static/login.html">Connexion</a></li>
+              <li><a class="button signup" href="/Monlabo/gerant/index.html">Inscription</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+
+    <div class="container">
+
+        <div class="banner_box">
+            <div class="row">
+                <div class="col-md-6">
+                  <h3 class="title_banner">
+                    Simplifier l’expérience de la réservation
+                  </h3>
+
+                  <div class="mt-3 banner_decript">
+                    <div>
+                      Offrez à vos élèves un outil simple pour réserver leurs leçons de conduite facilement. 
+                    </div>
+                    <div class="mt-3">Gérez votre staff et observez l'engagement de vos élèves et suivez les progrès de votre auto-école</div>
+                  </div>
+
+                  <div class="mt-3">
+                      <a href="" class="dash_access_btn">Accédez à votre Espace Professionnel</a>
+                  </div>
+                </div>
+
+                <div class="col-md-6 text-right">
+                    <img src="/Monlabo/public/images/amico.png" alt="" class="img_banner">
+                </div>
+            </div>
+        </div>
+
+
+        <div style=" margin-top: -200px;">
+            <div class="about_appli_box">
+                <div class="appli_box_header">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <div class="nav__Tabs">
+                        <ul>
+                            <li class="current"><a href="#"><span>Fonctionnalités Auto-écoles</span></a></li>
+                            <li class=""><a href="#"><span>Avantages pour les élèves</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="box-content-tabs">
+                    
+                  <div class="row pt-3">
+                      <div class="col-md-7">
+                        
+                        <div class="d-flex">
+                          <div class="text-right col-img">
+                            <img src="/Monlabo/public/images/icon-bag.png" alt=""/>
+                          </div>
+
+                          <div class="col-content">
+                            <h3>Charge du travail reduit & Gain de temps</h3>
+                            <div>En utilisant MonLabo, vos élèves ne sont plus tenus d’appeler ou de se rendre au bureau pour planifier leurs leçons. ce qui se traduit par un gain de temps précieux pour votre personnel administratif.</div>
+                          </div>
+                        </div>
+                        
+                        <div class="d-flex mt-3">
+                          <div class="text-right col-img">
+                            <img src="/Monlabo/public/images/codicon_graph.png" alt=""/>
+                          </div>
+
+                          <div class="col-content">
+                            <h3>Les chiffres clés en temps réel</h3>
+                            <div>Suivez en temps réel le chiffre d'affaires et la charge de travail de vos moniteurs grâce à notre outil de statistiques.</div>
+                          </div>
+                        </div>
+
+                        <div class="d-flex mt-3">
+                          <div class="text-right col-img">
+                            <img src="/Monlabo/public/images/flash-icon.png" alt=""/>
+                          </div>
+
+                          <div class="col-content">
+                            <h3>Automatisation des tâches & Efficicaté accrue</h3>
+                            <div>MonLabo propose aux gérants des automatisations utiles telles que les rappels aux élèves, la gestion des paiements, et la création automatisée de rapports.</div>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="col-md-5">
+                          <img src="/Monlabo/public/images/img-tab-1.png" alt=".." style="max-width: 100%;">
+                      </div>
+                  </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-md-8 offset-md-2">
+            <h3 class="cta_about_title">Comment réserver sur MonLabo ?</h3>
+            <div class="cta_about_descript">
+              Nous sommes ravis de vous présenter notre système de réservation en ligne qui simplifiera votre expérience d'apprentissage de la conduite. Voici comment cela fonctionne en quelques étapes simples :
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="mt-5">
+      <div class="container panel_cards">
+          <div class="row">
+              <div class="col-md-10 offset-md-1">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card-options">
+                              <div class="text-center">
+                                <img src="/Monlabo/public/images/Calendar.png" alt="">
+                              </div>
+                              <div class="text-center mt-3">
+                                <h3 class="sub-title-card">
+                                  Choix du cours
+                                </h3>
+                              </div>
+
+                              <div class="text-center">
+                                <div class="sub-content-card">
+                                  Choisissez la date et l'heure qui vous conviennent le mieux parmi nos disponibilités.
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                          <div class="card-options">
+                            <div class="text-center">
+                              <img src="/Monlabo/public/images/paiement-icon.png" alt="" style="height: 100px;">
+                            </div>
+                            <div class="text-center mt-3">
+                              <h3 class="sub-title-card">
+                                Paiement sécurisé
+                              </h3>
+                            </div>
+
+                            <div class="text-center">
+                              <div class="sub-content-card">
+                                Vous pouvez utiliser différentes modes de paiement selon les exigences de l’auto-école.
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-4">
+                          <div class="card-options">
+                            <div class="text-center">
+                              <img src="/Monlabo/public/images/rafiki.png" alt="">
+                            </div>
+                            <div class="text-center mt-3">
+                              <h3 class="sub-title-card">
+                                Leçon de conduite
+                              </h3>
+                            </div>
+
+                            <div class="text-center">
+                              <div class="sub-content-card">
+                                Profitez plainement de votre cours de conduite avec un instructeurs.
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                    </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="mt-1 cta_wave">
+      <div class="container" style="min-height: 200px;">
+        <div class="row mt-5">
+            <div class="col-md-6 offset-md-3">
+                <div class="row mt-5">
+                  <div class="col-md-6 col-6 text-right">
+                      <a href="#!" class="btn btn-primary" style="font-family: HurmeGeometricSans1;">Faire une réservation</a>
+                  </div>
+                  <div class="col-md-6 col-6">
+                    <a href="#!" class="btn btn-primary" style="background: #000000; font-family: HurmeGeometricSans1;">Consulter mon rapport</a>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer_section">
+        <div class="container pt-4">
+            <div class="row">
+                <div class="col-md-4 mt-3">
+                    <div class="mb-3">
+                      <a href="/Monlabo/index.html"><img src="/Monlabo/public/images/logo-SAAS-2.png" alt="" style="height: 40px;"></a>
+                    </div>
+
+                    <div style="font-family: HurmeGeometricSans1; font-size: 19px; font-weight: 600; color: #fff;">
+                      suivez-nous
+                    </div>
+
+                    <div class="mt-3">
+                      <a href="" class="m-3" style="text-decoration: none;">
+                        <img src="/Monlabo/public/images/icon-facebook.png" alt=""/>
+                      </a>
+                      <a href="" class="m-3" style="text-decoration: none;">
+                        <img src="/Monlabo/public/images/simple-icons_x.png" alt=""/>
+                      </a>
+                      <a href="" class="m-3" style="text-decoration: none;">
+                        <img src="/Monlabo/public/images/ant-design_linkedin-outlined.png" alt=""/>
+                      </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mt-3">
+                  <h3 class="title-useful-link">
+                    Liens utiles
+                  </h3>
+                  <div class="useful-link">
+                    Accueil
+                  </div>
+                  <div class="useful-link">
+                    Connexion Élève
+                  </div>
+                  <div class="useful-link">
+                    Connexion Professionnelle
+                  </div>
+                  <div class="useful-link">
+                    A propos
+                  </div>
+                  <div class="useful-link">
+                    Faire une réservation
+                  </div>
+                  <div class="useful-link">
+                    Contact
+                  </div>
+                </div>
+
+                <div class="col-md-4 mt-3">
+                  <h3 class="title-useful-link">
+                    support technique
+                  </h3>
+                  <div class="useful-link mt-2">
+                    <div class="d-flex">
+                      <div class="pr-2"><span class="bi bi-telephone" style="font-size: 39px; color: #2696F0;"></span></div>
+                      <div class="pt-2">08 12 345 678</div>
+                    </div>
+                  </div>
+                  <div class="useful-link">
+                    <div class="d-flex">
+                      <div class="pr-2"><span class="bi bi-envelope" style="font-size: 39px; color: #2696F0;"></span></div>
+                      <div class="pt-2">support@monlabo.com</div>
+                    </div>
+                  </div>
+                  
+                  <div class="useful-link mt-5">
+                    Mentions légales
+                  </div>
+                  <div class="useful-link">
+                    Conditions Générales d’Utilisation
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer_link">
+
+      <div class="container">
+        <div class="footer_copyright">Copyright © 2023 Monlabo. Tous droits réservés</div>
+      </div>
+      
+    </div>
+    <!--**********************************
+        Scripts
+    ***********************************-->
+
+    <script>
+        function menu()
+        {
+            var the_menu = document.getElementsByClassName("m_menu")[0];
+            the_menu.classList.toggle('open');
+        }
+
+        $(document).on('click', 'li', function() {
+          $('.current').removeClass('current');
+          $(this).addClass('current');
+        });
+    </script>
+    
+    <script src="/Monlabo/public/js/global.min.js"></script>
+    <script src="/Monlabo/public/js/quixnav-init.js"></script>
+    <script src="/Monlabo/public/js/custom.min.js"></script>
+
+    <script src="/Monlabo/public/js/Chart.bundle.min.js"></script>
+</body>
+
+</html>

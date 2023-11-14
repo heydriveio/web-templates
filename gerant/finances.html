@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mon labo</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../public/images/logo-icon.png">
+    <link href="../public/css/style.css" rel="stylesheet">
+    <link href="../public/css/custom.css" rel="stylesheet">
+    <link href="../public/css/fontsaps.css" rel="stylesheet">
+    <link href="../public/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="/Monlabo/public/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <?php include 'header.html' ?>
+
+        <?php include 'left-sidebar.html' ?>
+        
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body" style="background: #F4FBFE; min-height: 700px!important;">
+            <!-- row -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-5 col-md-8">
+                        <div class="mb-3 shadow_box_item">
+                            <div class="row">
+                                <div class="col-md-6 text-center">
+                                    <a href="#!" class="active_v" target-attr="nav-tabs-actif">Opérations avec clients</a>
+                                </div>
+                                <div class="col-md-6 text-center">
+                                    <a href="#!" target-attr="nav-tabs-inactif">Opération avec la plateforme</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-4 text-right">
+                        <select name="" id="" class="form-control float-end" style="width: 80px;">
+                            <option value="">Periode</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="nav-tab-default  nav-tabs-actif">
+
+                    <div class="row mb-3">
+                        <div class="col-md-3">
+                            <div class="card-paiement" style="border: 1px solid #000000;">
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <img src="/Monlabo/public/images/money-dash1.png" alt="">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-right" style="color: #858891;">
+                                            100%
+                                        </h6>
+                                    </div>
+                                </div>
+                                <h3 class="text-left"> 1 000 000 </h3>
+                                <div class="descItem2">
+                                    Toutes les réservations
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-3">
+                            <div class="card-paiement" style="border: 1px solid #1AB846;">
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <img src="/Monlabo/public/images/money-dash2.png" alt="">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-right" style="color: #858891;">
+                                            100%
+                                        </h6>
+                                    </div>
+                                </div>
+                                <h3 class="text-left" style="color: #1AB846;"> 880 000 </h3>
+                                <div class="descItem2">
+                                    Montant perçu
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-3">
+                            <div class="card-paiement" style="border: 1px solid #DC3545;">
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <img src="/Monlabo/public/images/money-dash3.png" alt="">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-right" style="color: #858891;">
+                                            100%
+                                        </h6>
+                                    </div>
+                                </div>
+                                <h3 class="text-left" style="color: #DC3545;"> 880 000 </h3>
+                                <div class="descItem2">
+                                    Toutes les annulations
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-3">
+                            <div class="card-paiement" style="border: 1px solid #00AAE4;">
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <img src="/Monlabo/public/images/money-dash4.png" alt="">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-right" style="color: #858891;">
+                                            100%
+                                        </h6>
+                                    </div>
+                                </div>
+                                <h3 class="text-left" style="color: #00AAE4;"> 20 000 </h3>
+                                <div class="descItem2">
+                                    Montant à percevoir
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="gray-title">
+                                Liste des opérations
+                            </h3>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" style="background: #fff;">
+                                    <img src="/Monlabo/public/images/filter-icon.png" alt="" style="height: 22px;">
+                                  </span>
+                                </div>
+                                <input type="text" class="form-control">
+                                <div class="input-group-append">
+                                  <button class="input-group-text" style="background: #fff;">
+                                    <span class="bi bi-search"></span>
+                                  </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="btn-group dropdown-prfl" role="group">
+                                <a href="javascript::void(0)" id="btnGroupDrop1" class="btn cta-dash-btn" style="line-height: 25px;">
+                                    <img src="/Monlabo/public/images/sort-icon.png" alt="" style="margin-right: 5px;">
+                                    Affichage & Trie
+                                </a>
+                                <div class="dropdown-content-prfl" style="right: 0px;">
+                                    <a href="javascript::void(0)" class="dropdown-item">
+                                        Transmission croissant
+                                    </a>
+                                    <a href="javascript::void(0)" class="dropdown-item open-confirm-modal">
+                                        Transmission décroissant
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-6 text-right">
+                            <span class="stats-page-descript">Tous les paiements (300) </span> | <a href="" class="stats-page-descript">Réservations (200)</a> | <a href="" class="stats-page-descript">Annulations (100)</a> <span class="stats-page-descript"><a href=""><img src="/Monlabo/public/images/icon-refresh.png"/></a></span>
+                        </div>
+                    </div>
+    
+                    <div class="card-dash-csu">
+                        <div class="table-responsive-vertical shadow-z-1" style="box-shadow:0px 0px 2px rgba(0,0,0,0.0005);">
+                          <table id="table" class="table table-hover table-mc-light-blue" style="margin: 0px 0px 15px 0px;">
+                         <thead>
+                         <tr>
+                           <th>
+                            <div class="mb-1">
+                                <div class="br-checkbox">
+                                    <input id="checkbox-ind1" name="checkbox-ind1" type="checkbox" aria-label="TITRE" checked="checked" indeterminate="indeterminate" data-parent="check-01">
+                                    <label for="checkbox-ind1">Apprenant</label>
+                                </div>
+                            </div>
+                            </th>
+                           <th>Type de paiement</th>
+                           <th>Réservation (heures)</th>
+                           <th>Montant (EURO)</th>
+                           <th>Détail</th>
+                         </tr>
+                         </thead>
+                         <tbody>
+    
+                           <tr>
+                             <td data-title="Apprenant">
+                                <div class="mb-1">
+                                    <div class="br-checkbox">
+                                        <input id="checkbox-01" name="checkbox-01" type="checkbox" aria-label="Gregory Turner" checked="checked" data-child="check-01">
+                                        <label for="checkbox-01">
+                                            Gregory Turner
+                                            <div class="libele-param-enrole">Reservation-ID-001-123</div>
+                                        </label>
+                                        
+                                    </div>
+                                </div>
+                             </td>
+                             <td data-title="Type de paiement">
+                                Online - PayPal
+                                <div class="libele-param-enrole">20/09/2022</div>
+                            </td>
+                             <td data-title="Réservation (heures)">02</td>
+                             <td data-title="Montant (EURO)">80</td>
+                             <td data-title="Détail" style="white-space: nowrap;" class="text-right">
+                                <div class="btn-group dropdown-prfl" role="group">
+                                    <a href="javascript::void(0)" id="btnGroupDrop1" style="line-height: 25px;">
+                                        <img src="/Monlabo/public/images/icon-ellipse-v.png" alt="" style="margin-right: 5px;">
+                                    </a>
+                                    <div class="dropdown-content-prfl" style="right: 0px;">
+                                        <a href="javascript::void(0)" class="dropdown-item">
+                                            Modifier <img src="/Monlabo/public/images/edit.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                        <a href="javascript::void(0)" class="dropdown-item open-confirm-modal">
+                                            Supprimer <img src="/Monlabo/public/images/delete-icon.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                    </div>
+                                </div>
+                             </td>
+                           </tr>
+    
+                           <tr>
+                            <td data-title="Apprenant">
+                                <div class="mb-1">
+                                    <div class="br-checkbox">
+                                      <input id="checkbox-02" name="checkbox-02" type="checkbox" aria-label="0123456" data-child="check-01">
+                                      <label for="checkbox-02">
+                                            Melvin Kohler IV
+                                            <div class="libele-param-enrole">Reservation-ID-001-123</div>
+                                      </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-title="Type de paiement">
+                                Chèque
+                                <div class="libele-param-enrole">01/10/2022</div>
+                            </td>
+                            <td data-title="Réservation (heures)">02</td>
+                            <td data-title="Montant (EURO)">80</td>
+                            <td data-title="Action" style="white-space: nowrap;" class="text-right">
+                                <div class="btn-group dropdown-prfl" role="group">
+                                    <a href="javascript::void(0)" id="btnGroupDrop1" style="line-height: 25px;">
+                                        <img src="/Monlabo/public/images/icon-ellipse-v.png" alt="" style="margin-right: 5px;">
+                                    </a>
+                                    <div class="dropdown-content-prfl" style="right: 0px;">
+                                        <a href="javascript::void(0)" class="dropdown-item">
+                                            Modifier <img src="/Monlabo/public/images/edit.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                        <a href="javascript::void(0)" class="dropdown-item open-confirm-modal">
+                                            Supprimer <img src="/Monlabo/public/images/delete-icon.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                          </tr>
+    
+                          <tr>
+                            <td data-title="Apprenant">
+                                <div class="mb-1">
+                                    <div class="br-checkbox">
+                                      <input id="checkbox-03" name="checkbox-03" type="checkbox" aria-label="8021358" data-child="check-01">
+                                      <label for="checkbox-03">
+                                            Don Welch
+                                            <div class="libele-param-enrole">Reservation-ID-001-123</div>
+                                      </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-title="Type de paiement">
+                                Cash
+                                <div class="libele-param-enrole">01/10/2022</div>
+                            </td>
+                            <td data-title="Réservation (heures)">02</td>
+                            <td data-title="Montant (EURO)">80</td>
+                            <td data-title="Action" style="white-space: nowrap;" class="text-right">
+                                <div class="btn-group dropdown-prfl" role="group">
+                                    <a href="javascript::void(0)" id="btnGroupDrop1" style="line-height: 25px;">
+                                        <img src="/Monlabo/public/images/icon-ellipse-v.png" alt="" style="margin-right: 5px;">
+                                    </a>
+                                    <div class="dropdown-content-prfl" style="right: 0px;">
+                                        <a href="javascript::void(0)" class="dropdown-item">
+                                            Modifier <img src="/Monlabo/public/images/edit.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                        <a href="javascript::void(0)" class="dropdown-item open-confirm-modal">
+                                            Supprimer <img src="/Monlabo/public/images/delete-icon.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                          </tr>
+    
+                          <tr>
+                            <td data-title="Apprenant">
+                                <div class="mb-1">
+                                    <div class="br-checkbox">
+                                      <input id="checkbox-04" name="checkbox-04" type="checkbox" aria-label="8021358" data-child="check-01">
+                                      <label for="checkbox-04">
+                                            Dr. Luke Christiansen
+                                            <div class="libele-param-enrole">Reservation-ID-001-123</div>
+                                      </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-title="Type de paiement">
+                                Cash
+                                <div class="libele-param-enrole">01/10/2022</div>
+                            </td>
+                            <td data-title="Réservation (heures)">02</td>
+                            <td data-title="Montant (EURO)">80</td>
+                            <td data-title="Action" style="white-space: nowrap;" class="text-right">
+                                <div class="btn-group dropdown-prfl" role="group">
+                                    <a href="javascript::void(0)" id="btnGroupDrop1" style="line-height: 25px;">
+                                        <img src="/Monlabo/public/images/icon-ellipse-v.png" alt="" style="margin-right: 5px;">
+                                    </a>
+                                    <div class="dropdown-content-prfl" style="right: 0px;">
+                                        <a href="javascript::void(0)" class="dropdown-item">
+                                            Modifier <img src="/Monlabo/public/images/edit.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                        <a href="javascript::void(0)" class="dropdown-item open-confirm-modal">
+                                            Supprimer <img src="/Monlabo/public/images/delete-icon.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                          </tr>
+    
+                          <tr>
+                            <td data-title="Apprenant">
+                                <div class="mb-1">
+                                    <div class="br-checkbox">
+                                      <input id="checkbox-05" name="checkbox-05" type="checkbox" aria-label="1682885" data-child="check-01">
+                                      <label for="checkbox-05">
+                                        Melvin Kohler IV
+                                            <div class="libele-param-enrole">Reservation-ID-001-123</div>
+                                      </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-title="Type de paiement">
+                                Cash
+                                <div class="libele-param-enrole">01/10/2022</div>
+                            </td>
+                            <td data-title="Réservation (heures)">02</td>
+                            <td data-title="Montant (EURO)">100</td>
+                            <td data-title="Action" style="white-space: nowrap;" class="text-right">
+                                <div class="btn-group dropdown-prfl" role="group">
+                                    <a href="javascript::void(0)" id="btnGroupDrop1" style="line-height: 25px;">
+                                        <img src="/Monlabo/public/images/icon-ellipse-v.png" alt="" style="margin-right: 5px;">
+                                    </a>
+                                    <div class="dropdown-content-prfl" style="right: 0px;">
+                                        <a href="javascript::void(0)" class="dropdown-item">
+                                            Modifier <img src="/Monlabo/public/images/edit.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                        <a href="javascript::void(0)" class="dropdown-item open-confirm-modal">
+                                            Supprimer <img src="/Monlabo/public/images/delete-icon.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                          </tr>
+    
+                          <tr>
+                            <td data-title="Apprenant">
+                                <div class="mb-1">
+                                    <div class="br-checkbox">
+                                      <input id="checkbox-06" name="checkbox-06" type="checkbox" aria-label="1682885" data-child="check-01">
+                                      <label for="checkbox-06">
+                                        Melvin Kohler IV
+                                            <div class="libele-param-enrole">Reservation-ID-001-123</div>
+                                      </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-title="Type de paiement">
+                                Cash
+                                <div class="libele-param-enrole">01/10/2022</div>
+                            </td>
+                            <td data-title="Réservation (heures)">05</td>
+                            <td data-title="Montant (EURO)">54</td>
+                            <td data-title="Action" style="white-space: nowrap;" class="text-right">
+                                <div class="btn-group dropdown-prfl" role="group">
+                                    <a href="javascript::void(0)" id="btnGroupDrop1" style="line-height: 25px;">
+                                        <img src="/Monlabo/public/images/icon-ellipse-v.png" alt="" style="margin-right: 5px;">
+                                    </a>
+                                    <div class="dropdown-content-prfl" style="right: 0px;">
+                                        <a href="javascript::void(0)" class="dropdown-item">
+                                            Modifier <img src="/Monlabo/public/images/edit.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                        <a href="javascript::void(0)" class="dropdown-item open-confirm-modal">
+                                            Supprimer <img src="/Monlabo/public/images/delete-icon.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                          </tr>
+    
+                          <tr>
+                            <td data-title="Apprenant">
+                                <div class="mb-1">
+                                    <div class="br-checkbox">
+                                      <input id="checkbox-07" name="checkbox-07" type="checkbox" aria-label="1682885" data-child="check-01">
+                                      <label for="checkbox-07">
+                                        Melvin Kohler IV
+                                            <div class="libele-param-enrole">Reservation-ID-001-123</div>
+                                      </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-title="Type de paiement">
+                                Cash
+                                <div class="libele-param-enrole">01/10/2022</div>
+                            </td>
+                            <td data-title="Réservation (heures)">04</td>
+                            <td data-title="Montant (EURO)">15</td>
+                            <td data-title="Action" style="white-space: nowrap;" class="text-right">
+                                <div class="btn-group dropdown-prfl" role="group">
+                                    <a href="javascript::void(0)" id="btnGroupDrop1" style="line-height: 25px;">
+                                        <img src="/Monlabo/public/images/icon-ellipse-v.png" alt="" style="margin-right: 5px;">
+                                    </a>
+                                    <div class="dropdown-content-prfl" style="right: 0px;">
+                                        <a href="javascript::void(0)" class="dropdown-item">
+                                            Modifier <img src="/Monlabo/public/images/edit.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                        <a href="javascript::void(0)" class="dropdown-item open-confirm-modal">
+                                            Supprimer <img src="/Monlabo/public/images/delete-icon.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                          </tr>
+    
+                          <tr>
+                            <td data-title="Apprenant">
+                                <div class="mb-1">
+                                    <div class="br-checkbox">
+                                      <input id="checkbox-08" name="checkbox-08" type="checkbox" aria-label="1682885" data-child="check-01">
+                                      <label for="checkbox-08">
+                                        Melvin Kohler IV
+                                            <div class="libele-param-enrole">Reservation-ID-001-123</div>
+                                      </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-title="Type de paiement">
+                                Cash
+                                <div class="libele-param-enrole">01/10/2022</div>
+                            </td>
+                            <td data-title="Réservation (heures)">10</td>
+                            <td data-title="Montant (EURO)">45</td>
+                            <td data-title="Action" style="white-space: nowrap;" class="text-right">
+                                <div class="btn-group dropdown-prfl" role="group">
+                                    <a href="javascript::void(0)" id="btnGroupDrop1" style="line-height: 25px;">
+                                        <img src="/Monlabo/public/images/icon-ellipse-v.png" alt="" style="margin-right: 5px;">
+                                    </a>
+                                    <div class="dropdown-content-prfl" style="right: 0px;">
+                                        <a href="javascript::void(0)" class="dropdown-item">
+                                            Modifier <img src="/Monlabo/public/images/edit.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                        <a href="javascript::void(0)" class="dropdown-item open-confirm-modal">
+                                            Supprimer <img src="/Monlabo/public/images/delete-icon.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                          </tr>
+    
+                         </tbody>
+                        </table>
+                        </div>
+                    </div>
+    
+                    <div class="row mt-5">
+                        <div class="col-md-6">
+                            1-20 sur 48
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <div class="frame float-right">
+                                <div class="btn-bar">
+                                  <div class="buttons">
+                                    <div class="btn scroll disabled" page="prev">
+                                        <svg class="icon" width="16.101" height="15.903" viewBox="0 0 16.101 15.903">
+                                          <path d="M-80,22l16.1-7.876L-66.968,22l3.069,8.027Z" transform="translate(80 -14.124)"></path>
+                                        </svg>
+                                      </div>
+                                    <div class="btn active" page="1">1</div>
+                                    <div class="btn" page="2">2</div>
+                                    <div class="btn" page="3">3</div>
+                                    <div class="btn" page="4">4</div>
+                                    <div class="btn" page="5">5</div>
+                                    <div class="btn" page="6">6</div>
+                                    <div class="btn" page="3">3</div>
+                                    <div class="btn" page="4">4</div>
+                                    <div class="btn" page="5">5</div>
+                                    <div class="btn" page="6">6</div>
+                                    <div class="btn scroll" page="next">
+                                        <svg class="icon" width="16.101" height="15.903" viewBox="0 0 16.101 15.903">
+                                          <path d="M-80,22l16.1-7.876L-66.968,22l3.069,8.027Z" transform="translate(-63.899 30.027) rotate(180)"></path>
+                                        </svg>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="nav-tab-default nav-tabs-inactif" style="display: none;">
+                    
+                    <div class="row mb-3">
+                        <div class="col-md-3">
+                            <div class="card-paiement" style="border: 1px solid #000000;">
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <img src="/Monlabo/public/images/money-dash1.png" alt="">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-right" style="color: #858891;">
+                                            100%
+                                        </h6>
+                                    </div>
+                                </div>
+                                <h3 class="text-left"> 50 000 </h3>
+                                <div class="descItem2">
+                                    Factures Globales
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-3">
+                            <div class="card-paiement" style="border: 1px solid #1AB846;">
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <img src="/Monlabo/public/images/money-dash2.png" alt="">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-right" style="color: #858891;">
+                                            100%
+                                        </h6>
+                                    </div>
+                                </div>
+                                <h3 class="text-left" style="color: #1AB846;"> 30 000 </h3>
+                                <div class="descItem2">
+                                    Montant versé
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-3">
+                            <div class="card-paiement" style="border: 1px solid #DC3545;">
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <img src="/Monlabo/public/images/money-dash3.png" alt="">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-right" style="color: #858891;">
+                                            100%
+                                        </h6>
+                                    </div>
+                                </div>
+                                <h3 class="text-left" style="color: #DC3545;"> 15 000 </h3>
+                                <div class="descItem2">
+                                    Montant à verser
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-md-3">
+                            <div class="card-paiement" style="border: 1px solid #00AAE4;">
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <img src="/Monlabo/public/images/money-dash4.png" alt="">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-right" style="color: #858891;">
+                                            100%
+                                        </h6>
+                                    </div>
+                                </div>
+                                <h3 class="text-left" style="color: #00AAE4;"> 5 000 </h3>
+                                <div class="descItem2">
+                                    Surplus
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                    
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="gray-title">
+                                Liste des factures
+                            </h3>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" style="background: #fff;">
+                                    <img src="/Monlabo/public/images/filter-icon.png" alt="" style="height: 22px;">
+                                  </span>
+                                </div>
+                                <input type="text" class="form-control">
+                                <div class="input-group-append">
+                                  <button class="input-group-text" style="background: #fff;">
+                                    <span class="bi bi-search"></span>
+                                  </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="btn-group dropdown-prfl" role="group">
+                                <a href="javascript::void(0)" id="btnGroupDrop1" class="btn cta-dash-btn" style="line-height: 25px;">
+                                    <img src="/Monlabo/public/images/sort-icon.png" alt="" style="margin-right: 5px;">
+                                    Affichage & Trie
+                                </a>
+                                <div class="dropdown-content-prfl" style="right: 0px;">
+                                    <a href="javascript::void(0)" class="dropdown-item">
+                                        Transmission croissant
+                                    </a>
+                                    <a href="javascript::void(0)" class="dropdown-item open-confirm-modal">
+                                        Transmission décroissant
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-6 text-right">
+                            <span class="stats-page-descript">Toutes les opérations (300) </span> | <a href="" class="stats-page-descript">Payés (200)</a> | <a href="" class="stats-page-descript">Impayés (100)</a> <span class="stats-page-descript"><a href=""><img src="/Monlabo/public/images/icon-refresh.png"/></a></span>
+                        </div>
+                    </div>
+    
+                    <div class="card-dash-csu">
+                        <div class="table-responsive-vertical shadow-z-1" style="box-shadow:0px 0px 2px rgba(0,0,0,0.0005);">
+                          <table id="table" class="table table-hover table-mc-light-blue" style="margin: 0px 0px 15px 0px;">
+                         <thead>
+                         <tr>
+                           <th>
+                            <div class="mb-1">
+                                <div class="br-checkbox">
+                                    <input id="checkbox-ind1" name="checkbox-ind1" type="checkbox" aria-label="TITRE" checked="checked" indeterminate="indeterminate" data-parent="check-01">
+                                    <label for="checkbox-ind1">Référence</label>
+                                </div>
+                            </div>
+                            </th>
+                           <th>Type de paiement</th>
+                           <th>Réservation (heures)</th>
+                           <th>Montant (EURO)</th>
+                           <th>Statut</th>
+                           <th>Détail</th>
+                         </tr>
+                         </thead>
+                         <tbody>
+    
+                           <tr>
+                             <td data-title="Référence">
+                                <div class="mb-1">
+                                    <div class="br-checkbox">
+                                        <input id="checkbox-01" name="checkbox-01" type="checkbox" aria-label="Gregory Turner" checked="checked" data-child="check-01">
+                                        <label for="checkbox-01">
+                                            Gregory Turner
+                                            <div class="libele-param-enrole">Reservation-ID-001-123</div>
+                                        </label>
+                                        
+                                    </div>
+                                </div>
+                             </td>
+                             <td data-title="Type de paiement">
+                                Online - PayPal
+                                <div class="libele-param-enrole">20/09/2022</div>
+                            </td>
+                             <td data-title="Réservation (heures)">02</td>
+                             <td data-title="Montant (EURO)">80</td>
+                             <td data-title="Statut">
+                                <div>
+                                    <label class="alertocm alertocm-success">
+                                        <span></span>
+                                        Payé
+                                    </label>
+                                </div>
+                             </td>
+                             <td data-title="Détail" style="white-space: nowrap;" class="text-right">
+                                <div class="btn-group dropdown-prfl" role="group">
+                                    <a href="javascript::void(0)" id="btnGroupDrop1" style="line-height: 25px;">
+                                        <img src="/Monlabo/public/images/icon-ellipse-v.png" alt="" style="margin-right: 5px;">
+                                    </a>
+                                    <div class="dropdown-content-prfl" style="right: 0px;">
+                                        <a href="javascript::void(0)" class="dropdown-item">
+                                            Modifier <img src="/Monlabo/public/images/edit.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                        <a href="javascript::void(0)" class="dropdown-item open-confirm-modal">
+                                            Supprimer <img src="/Monlabo/public/images/delete-icon.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                    </div>
+                                </div>
+                             </td>
+                           </tr>
+    
+                           <tr>
+                            <td data-title="Référence">
+                                <div class="mb-1">
+                                    <div class="br-checkbox">
+                                      <input id="checkbox-02" name="checkbox-02" type="checkbox" aria-label="0123456" data-child="check-01">
+                                      <label for="checkbox-02">
+                                            Melvin Kohler IV
+                                            <div class="libele-param-enrole">Reservation-ID-001-123</div>
+                                      </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-title="Type de paiement">
+                                Chèque
+                                <div class="libele-param-enrole">01/10/2022</div>
+                            </td>
+                            <td data-title="Réservation (heures)">02</td>
+                            <td data-title="Montant (EURO)">80</td>
+                            <td data-title="Statut">
+                                <div>
+                                    <label class="alertocm alertocm-warning">
+                                        <span></span>
+                                        Pending
+                                    </label>
+                                </div>
+                             </td>
+                            <td data-title="Action" style="white-space: nowrap;" class="text-right">
+                                <div class="btn-group dropdown-prfl" role="group">
+                                    <a href="javascript::void(0)" id="btnGroupDrop1" style="line-height: 25px;">
+                                        <img src="/Monlabo/public/images/icon-ellipse-v.png" alt="" style="margin-right: 5px;">
+                                    </a>
+                                    <div class="dropdown-content-prfl" style="right: 0px;">
+                                        <a href="javascript::void(0)" class="dropdown-item">
+                                            Modifier <img src="/Monlabo/public/images/edit.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                        <a href="javascript::void(0)" class="dropdown-item open-confirm-modal">
+                                            Supprimer <img src="/Monlabo/public/images/delete-icon.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                          </tr>
+    
+                          <tr>
+                            <td data-title="Référence">
+                                <div class="mb-1">
+                                    <div class="br-checkbox">
+                                      <input id="checkbox-03" name="checkbox-03" type="checkbox" aria-label="8021358" data-child="check-01">
+                                      <label for="checkbox-03">
+                                            Don Welch
+                                            <div class="libele-param-enrole">Reservation-ID-001-123</div>
+                                      </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-title="Type de paiement">
+                                Cash
+                                <div class="libele-param-enrole">01/10/2022</div>
+                            </td>
+                            <td data-title="Réservation (heures)">02</td>
+                            <td data-title="Montant (EURO)">80</td>
+                            <td data-title="Statut">
+                                <div>
+                                    <label class="alertocm alertocm-danger">
+                                        <span></span>
+                                        Impayé
+                                    </label>
+                                </div>
+                             </td>
+                            <td data-title="Action" style="white-space: nowrap;" class="text-right">
+                                <div class="btn-group dropdown-prfl" role="group">
+                                    <a href="javascript::void(0)" id="btnGroupDrop1" style="line-height: 25px;">
+                                        <img src="/Monlabo/public/images/icon-ellipse-v.png" alt="" style="margin-right: 5px;">
+                                    </a>
+                                    <div class="dropdown-content-prfl" style="right: 0px;">
+                                        <a href="javascript::void(0)" class="dropdown-item">
+                                            Modifier <img src="/Monlabo/public/images/edit.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                        <a href="javascript::void(0)" class="dropdown-item open-confirm-modal">
+                                            Supprimer <img src="/Monlabo/public/images/delete-icon.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                          </tr>
+    
+                          <tr>
+                            <td data-title="Référence">
+                                <div class="mb-1">
+                                    <div class="br-checkbox">
+                                      <input id="checkbox-04" name="checkbox-04" type="checkbox" aria-label="8021358" data-child="check-01">
+                                      <label for="checkbox-04">
+                                            Dr. Luke Christiansen
+                                            <div class="libele-param-enrole">Reservation-ID-001-123</div>
+                                      </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-title="Type de paiement">
+                                Cash
+                                <div class="libele-param-enrole">01/10/2022</div>
+                            </td>
+                            <td data-title="Réservation (heures)">02</td>
+                            <td data-title="Montant (EURO)">80</td>
+                            <td data-title="Statut">
+                                <div>
+                                    <label class="alertocm alertocm-pending">
+                                        <span></span>
+                                        À rembourser
+                                    </label>
+                                </div>
+                             </td>
+                            <td data-title="Action" style="white-space: nowrap;" class="text-right">
+                                <div class="btn-group dropdown-prfl" role="group">
+                                    <a href="javascript::void(0)" id="btnGroupDrop1" style="line-height: 25px;">
+                                        <img src="/Monlabo/public/images/icon-ellipse-v.png" alt="" style="margin-right: 5px;">
+                                    </a>
+                                    <div class="dropdown-content-prfl" style="right: 0px;">
+                                        <a href="javascript::void(0)" class="dropdown-item">
+                                            Modifier <img src="/Monlabo/public/images/edit.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                        <a href="javascript::void(0)" class="dropdown-item open-confirm-modal">
+                                            Supprimer <img src="/Monlabo/public/images/delete-icon.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                          </tr>
+    
+                          <tr>
+                            <td data-title="Référence">
+                                <div class="mb-1">
+                                    <div class="br-checkbox">
+                                      <input id="checkbox-05" name="checkbox-05" type="checkbox" aria-label="1682885" data-child="check-01">
+                                      <label for="checkbox-05">
+                                        Melvin Kohler IV
+                                            <div class="libele-param-enrole">Reservation-ID-001-123</div>
+                                      </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-title="Type de paiement">
+                                Cash
+                                <div class="libele-param-enrole">01/10/2022</div>
+                            </td>
+                            <td data-title="Réservation (heures)">02</td>
+                            <td data-title="Montant (EURO)">100</td>
+                            <td data-title="Statut">
+                                <div>
+                                    <label class="alertocm alertocm-pending">
+                                        <span></span>
+                                        À rembourser
+                                    </label>
+                                </div>
+                             </td>
+                            <td data-title="Action" style="white-space: nowrap;" class="text-right">
+                                <div class="btn-group dropdown-prfl" role="group">
+                                    <a href="javascript::void(0)" id="btnGroupDrop1" style="line-height: 25px;">
+                                        <img src="/Monlabo/public/images/icon-ellipse-v.png" alt="" style="margin-right: 5px;">
+                                    </a>
+                                    <div class="dropdown-content-prfl" style="right: 0px;">
+                                        <a href="javascript::void(0)" class="dropdown-item">
+                                            Modifier <img src="/Monlabo/public/images/edit.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                        <a href="javascript::void(0)" class="dropdown-item open-confirm-modal">
+                                            Supprimer <img src="/Monlabo/public/images/delete-icon.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                          </tr>
+    
+                          <tr>
+                            <td data-title="Référence">
+                                <div class="mb-1">
+                                    <div class="br-checkbox">
+                                      <input id="checkbox-06" name="checkbox-06" type="checkbox" aria-label="1682885" data-child="check-01">
+                                      <label for="checkbox-06">
+                                        Melvin Kohler IV
+                                            <div class="libele-param-enrole">Reservation-ID-001-123</div>
+                                      </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-title="Type de paiement">
+                                Cash
+                                <div class="libele-param-enrole">01/10/2022</div>
+                            </td>
+                            <td data-title="Réservation (heures)">05</td>
+                            <td data-title="Montant (EURO)">54</td>
+                            <td data-title="Statut">
+                                <div>
+                                    <label class="alertocm alertocm-pending">
+                                        <span></span>
+                                        À rembourser
+                                    </label>
+                                </div>
+                             </td>
+                            <td data-title="Action" style="white-space: nowrap;" class="text-right">
+                                <div class="btn-group dropdown-prfl" role="group">
+                                    <a href="javascript::void(0)" id="btnGroupDrop1" style="line-height: 25px;">
+                                        <img src="/Monlabo/public/images/icon-ellipse-v.png" alt="" style="margin-right: 5px;">
+                                    </a>
+                                    <div class="dropdown-content-prfl" style="right: 0px;">
+                                        <a href="javascript::void(0)" class="dropdown-item">
+                                            Modifier <img src="/Monlabo/public/images/edit.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                        <a href="javascript::void(0)" class="dropdown-item open-confirm-modal">
+                                            Supprimer <img src="/Monlabo/public/images/delete-icon.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                          </tr>
+    
+                          <tr>
+                            <td data-title="Référence">
+                                <div class="mb-1">
+                                    <div class="br-checkbox">
+                                      <input id="checkbox-07" name="checkbox-07" type="checkbox" aria-label="1682885" data-child="check-01">
+                                      <label for="checkbox-07">
+                                        Melvin Kohler IV
+                                            <div class="libele-param-enrole">Reservation-ID-001-123</div>
+                                      </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-title="Type de paiement">
+                                Cash
+                                <div class="libele-param-enrole">01/10/2022</div>
+                            </td>
+                            <td data-title="Réservation (heures)">04</td>
+                            <td data-title="Montant (EURO)">15</td>
+                            <td data-title="Statut">
+                                <div>
+                                    <label class="alertocm alertocm-pending">
+                                        <span></span>
+                                        À rembourser
+                                    </label>
+                                </div>
+                             </td>
+                            <td data-title="Action" style="white-space: nowrap;" class="text-right">
+                                <div class="btn-group dropdown-prfl" role="group">
+                                    <a href="javascript::void(0)" id="btnGroupDrop1" style="line-height: 25px;">
+                                        <img src="/Monlabo/public/images/icon-ellipse-v.png" alt="" style="margin-right: 5px;">
+                                    </a>
+                                    <div class="dropdown-content-prfl" style="right: 0px;">
+                                        <a href="javascript::void(0)" class="dropdown-item">
+                                            Modifier <img src="/Monlabo/public/images/edit.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                        <a href="javascript::void(0)" class="dropdown-item open-confirm-modal">
+                                            Supprimer <img src="/Monlabo/public/images/delete-icon.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                          </tr>
+    
+                          <tr>
+                            <td data-title="Référence">
+                                <div class="mb-1">
+                                    <div class="br-checkbox">
+                                      <input id="checkbox-08" name="checkbox-08" type="checkbox" aria-label="1682885" data-child="check-01">
+                                      <label for="checkbox-08">
+                                        Melvin Kohler IV
+                                            <div class="libele-param-enrole">Reservation-ID-001-123</div>
+                                      </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-title="Type de paiement">
+                                Cash
+                                <div class="libele-param-enrole">01/10/2022</div>
+                            </td>
+                            <td data-title="Réservation (heures)">10</td>
+                            <td data-title="Montant (EURO)">45</td>
+                            <td data-title="Statut">
+                                <div>
+                                    <label class="alertocm alertocm-pending">
+                                        <span></span>
+                                        À rembourser
+                                    </label>
+                                </div>
+                             </td>
+                            <td data-title="Action" style="white-space: nowrap;" class="text-right">
+                                <div class="btn-group dropdown-prfl" role="group">
+                                    <a href="javascript::void(0)" id="btnGroupDrop1" style="line-height: 25px;">
+                                        <img src="/Monlabo/public/images/icon-ellipse-v.png" alt="" style="margin-right: 5px;">
+                                    </a>
+                                    <div class="dropdown-content-prfl" style="right: 0px;">
+                                        <a href="javascript::void(0)" class="dropdown-item">
+                                            Modifier <img src="/Monlabo/public/images/edit.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                        <a href="javascript::void(0)" class="dropdown-item open-confirm-modal">
+                                            Supprimer <img src="/Monlabo/public/images/delete-icon.png" alt="" class="float-right" style="height: 15px;">
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                          </tr>
+    
+                         </tbody>
+                        </table>
+                        </div>
+                    </div>
+    
+                    <div class="row mt-5">
+                        <div class="col-md-6">
+                            1-20 sur 48
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <div class="frame float-right">
+                                <div class="btn-bar">
+                                  <div class="buttons">
+                                    <div class="btn scroll disabled" page="prev">
+                                        <svg class="icon" width="16.101" height="15.903" viewBox="0 0 16.101 15.903">
+                                          <path d="M-80,22l16.1-7.876L-66.968,22l3.069,8.027Z" transform="translate(80 -14.124)"></path>
+                                        </svg>
+                                      </div>
+                                    <div class="btn active" page="1">1</div>
+                                    <div class="btn" page="2">2</div>
+                                    <div class="btn" page="3">3</div>
+                                    <div class="btn" page="4">4</div>
+                                    <div class="btn" page="5">5</div>
+                                    <div class="btn" page="6">6</div>
+                                    <div class="btn" page="3">3</div>
+                                    <div class="btn" page="4">4</div>
+                                    <div class="btn" page="5">5</div>
+                                    <div class="btn" page="6">6</div>
+                                    <div class="btn scroll" page="next">
+                                        <svg class="icon" width="16.101" height="15.903" viewBox="0 0 16.101 15.903">
+                                          <path d="M-80,22l16.1-7.876L-66.968,22l3.069,8.027Z" transform="translate(-63.899 30.027) rotate(180)"></path>
+                                        </svg>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+
+            </div>
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+
+
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright © 2023 MonLabo &amp; Developed by <a href="#">Omnijobber</a></p>
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+    <script src="../public/js/global.min.js"></script>
+    <script src="../public/js/quixnav-init.js"></script>
+    <script src="../public/js/custom.min.js"></script>
+
+    <script src="../public/js/Chart.bundle.min.js"></script>
+
+    <script src="../public/js/core-init.js"></script>
+
+    
+    <script>
+        $('.link-item-dash').eq(3).addClass('activeItem');
+        $('.add-new-content').eq(2).show();
+
+        $('.shadow_box_item a').click(function(){
+            $('.shadow_box_item a').removeClass('active_v');
+            $('.nav-tab-default').hide();
+            setTimeout(() => {
+                $(this).addClass('active_v');
+                $('.'+$(this).attr('target-attr')).show();
+            }, "100");
+        });
+    </script>
+</body>
+</html>

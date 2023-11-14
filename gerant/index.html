@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mon labo</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../public/images/logo-icon.png">
+    <link href="../public/css/style.css" rel="stylesheet">
+    <link href="../public/css/custom.css" rel="stylesheet">
+    <link href="../public/css/fontsaps.css" rel="stylesheet">
+    <link href="../public/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="/Monlabo/public/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <?php include 'header.html' ?>
+
+        <?php include 'left-sidebar.html' ?>
+        
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body" style="background: #F4FBFE; min-height: 700px!important;">
+            <!-- row -->
+            <div class="container-fluid">
+                
+                <div class="row">
+                    <div class="col-md-8">
+
+                        <div class="cardd-dash" style="min-height: 260px;">
+                            <h3>Résumé</h3>
+
+                            <div class="row mt-5">
+                                <div class="col-md-4 text-center">
+                                    <div class="count-item-dash" style="border-right: 1px solid #B6DDFE;">
+                                        <h3> 103 </h3>
+                                        <div class="descItem">Nombre de <br>visiteurs</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 text-center">
+                                    <div class="count-item-dash" style="border-right: 1px solid #B6DDFE;">
+                                        <h3> 15 </h3>
+                                        <div class="descItem">Nombre <br>d’apprenants</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 text-center">
+                                    <div class="count-item-dash">
+                                        <h3> 241 </h3>
+                                        <div class="descItem">Véhicules  <br>opérationnels</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="cardd-dash mt-3" style="min-height: 200px;">
+                            <h3>Nombre de réservations par trimèstre</h3>
+
+                            <div class="row mt-2">
+                                <div class="col-md-8 text-center">
+                                    <canvas id="canvashist" height="120"></canvas>
+                                </div>
+                                <div class="col-md-4 text-center pt-5">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-6 col-6 text-right pt-2">
+                                                <span class="bp-legende-dash bp-legende1 mt-1"></span>
+                                            </div>
+                                            <div class="col-md-6 col-6">
+                                                <div class="form-group">
+                                                    <select name="" id="" class="form-control">
+                                                        <option value="">2022</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-6 text-right pt-2">
+                                                <span class="bp-legende-dash bp-legende3 mt-1"></span>
+                                            </div>
+                                            <div class="col-md-6 col-6">
+                                                <div class="form-group">
+                                                    <select name="" id="" class="form-control">
+                                                        <option value="">2023</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cardd-dash mt-3 mb-3" style="min-height: 200px;">
+                            <h3>Top 3 Moniteurs</h3>
+
+                            <div class="table-responsive-vertical shadow-z-1" style="box-shadow:0px 0px 2px rgba(0,0,0,0.0005);">
+                                <table id="table" class="table table-hover table-mc-light-blue" style="margin: 0px 0px 15px 0px;">
+                               <thead>
+                               <tr>
+                                 <th>Moniteur</th>
+                                 <th>Réservations</th>
+                                 <th>Heure</th>
+                               </tr>
+                               </thead>
+                               <tbody>
+          
+                                 <tr>
+                                   <td data-title="Moniteur">Stephanie Lambda</td>
+                                   <td data-title="Réservations">45</td>
+                                   <td data-title="Heure">
+                                      580
+                                   </td>
+                                 </tr>
+          
+                                 <tr>
+                                  <td data-title="AUTEURS">Melanie Grimes</td>
+                                  <td data-title="CATEGORIES">100</td>
+                                  <td data-title="DATE">
+                                     408
+                                  </td>
+                                  
+                                </tr>
+          
+                                <tr>
+                                  <td data-title="AUTEURS">Martin Nolan</td>
+                                  <td data-title="CATEGORIES">20</td>
+                                  <td data-title="DATE">
+                                     400
+                                  </td>
+                                </tr>
+          
+                               </tbody>
+                              </table>
+                              </div>
+
+                            <div class="text-right">
+                                <a href="">Voir tous <span class="bi bi-chevron-compact-right"></span></a>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="cardd-dash" style="min-height: 200px;">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h3 style="font-size: 17px;">Taux d’encaissement</h3>
+                                </div>
+                                <div class="col-md-4">
+                                    <form action="">
+                                        <div class="form-group">
+                                            <select name="" id="" class="form-control">
+                                                <option value="">Période</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="count-item-dash">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <h3 class="text-left" style="line-height: 25px; margin: 0px; font-size: 31px;"> 20 000 </h3>
+                                        <div class="descItem2">
+                                            Somme perçue (Euro)
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h6 class="mt-3" style="color: #1AB846;">
+                                            93.7%
+                                        </h6>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <h3 class="text-left" style="line-height: 25px; margin: 0px; font-size: 31px;"> 3 500 </h3>
+                                        <div class="descItem2">
+                                            Somme à percevoir (Euro)
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h6 class="mt-3" style="color: #DD2025;">
+                                            6.3%
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cardd-dash mt-4" style="min-height: 200px;">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h3 style="font-size: 17px;">Taux de cours manqués</h3>
+                                </div>
+                                <div class="col-md-4">
+                                    <form action="">
+                                        <div class="form-group">
+                                            <select name="" id="" class="form-control">
+                                                <option value="">Période</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="count-item-dash">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <h3 class="text-left" style="line-height: 25px; margin: 0px; font-size: 31px;"> 231 </h3>
+                                        <div class="descItem2">
+                                            Nombre de cours manqués
+                                        </div>
+                                    </div>
+                                </div>
+                             
+                                <div class="row mt-5">
+                                    <div class="col-md-8">
+                                        <h3 class="text-left" style="line-height: 25px; margin: 0px; font-size: 31px;">4 522</h3>
+                                        <div class="descItem2">
+                                            Cours manqués (heures)
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h6 class="mt-3" style="color: #1AB846;">
+                                            5.1%
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cardd-dash mt-4" style="min-height: 200px;">
+                            <h3 style="font-size: 17px;">Apprenants</h3>
+                            <canvas id="canvaspie" height="200"></canvas>
+
+                            <div class="row mt-2">
+                                <div class="col-md-7 text-right">
+                                    <span class="bp-legende-dash bp-legende4"></span> <span class="descItem2">Cours validés</span>
+                                </div>
+                                <div class="col-md-5">
+                                    <span class="bp-legende-dash bp-legende5"></span> <span class="descItem2">Cours annulés</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+
+
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright © 2023 MonLabo &amp; Developed by <a href="#">Omnijobber</a></p>
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+
+    </div>
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+    <script src="../public/js/global.min.js"></script>
+    <script src="../public/js/quixnav-init.js"></script>
+    <script src="../public/js/custom.min.js"></script>
+
+    <script src="../public/js/Chart.bundle.min.js"></script>
+
+    <script>
+        var datapointshist1 = [20, 15, 55, 45];
+        var datapointshist2 = [80, 85, 45, 55];
+
+        var confighist = {
+            type: 'horizontalBar',
+            data: {
+                labels: ['Trimestre 1', 'Trimestre 2', 'Trimestre 3', 'Trimestre 4'],
+                datasets: [{
+                    axis: 'y',
+                    label: 'Dataset 1',
+                    backgroundColor: '#F8C12C',
+                    borderColor: '#FFFFFF',
+                    borderWidth: 0,
+                    barThickness: 20,
+                    fill: false,
+                    data: datapointshist1
+                }, {
+                    axis: 'y',
+                    label: 'Dataset 2',
+                    backgroundColor: '#0064d2',
+                    borderColor: '#FFFFFF',
+                    borderWidth: 0,
+                    barThickness: 20,
+                    fill: false,
+                    data: datapointshist2
+                }]
+            },
+            options: {
+                responsive: true,
+                indexAxis: 'y',
+                legend: {
+                    display: false,
+                    labels: {
+                        fontColor: 'rgb(255, 99, 132)'
+                    }
+                },
+                title: {
+                    display: false,
+                    text: 'Chart.js Bar Chart'
+                }
+            }
+        };
+
+        var datapointspie = [18,82]
+        var configpie = {
+            type: 'doughnut',
+            data: {
+                datasets: [{
+                    data: datapointspie,
+                    borderWidth: 1,
+                    borderColor: ['#DC3545','#1AB846'],
+                    backgroundColor: [
+                        "#FFD8D8",
+                        "#E7FFED"
+                    ],
+                    label: 'Dataset 1'
+                }],
+                labels: [
+                    'Red',
+                    'Orange',
+
+                ]
+            },
+            options: {
+                responsive: true,
+                cutoutPercentage: 50,
+                legend: {
+                    display: false,
+                    labels: {
+                        fontColor: 'rgb(255, 99, 132)'
+                    }
+                }
+            }
+        };
+
+
+        window.onload = function() {
+
+            var ctx2 = document.getElementById('canvashist').getContext('2d');
+            window.myBar = new Chart(ctx2, confighist);
+
+
+            var ctxpie = document.getElementById('canvaspie').getContext('2d');
+            window.myPie = new Chart(ctxpie, configpie);
+        };
+
+        $('.link-item-dash').eq(0).addClass('activeItem');
+    </script>
+
+</body>
+
+</html>
