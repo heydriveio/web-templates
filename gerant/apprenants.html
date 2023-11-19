@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mon labo</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../public/images/logo-icon.png">
+    <link href="../public/css/style.css" rel="stylesheet">
+    <link href="../public/css/custom.css" rel="stylesheet">
+    <link href="../public/css/fontsaps.css" rel="stylesheet">
+    <link href="../public/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="/Monlabo/public/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <?php include 'header.html' ?>
+
+        <?php include 'left-sidebar.html' ?>
+        
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body" style="background: #F4FBFE; min-height: 700px!important;">
+            <!-- row -->
+            <div class="container-fluid">
+                
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" style="background: #fff;">
+                                <img src="/Monlabo/public/images/filter-icon.png" alt="" style="height: 22px;">
+                              </span>
+                            </div>
+                            <input type="text" class="form-control">
+                            <div class="input-group-append">
+                              <button class="input-group-text" style="background: #fff;">
+                                <span class="bi bi-search"></span>
+                              </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="btn-group dropdown-prfl" role="group">
+                            <a href="javascript::void(0)" id="btnGroupDrop1" class="btn cta-dash-btn" style="line-height: 25px;">
+                                <img src="/Monlabo/public/images/sort-icon.png" alt="" style="margin-right: 5px;">
+                                Affichage & Trie
+                            </a>
+                            <div class="dropdown-content-prfl" style="right: 0px;">
+                                <a href="javascript::void(0)" class="dropdown-item" disabled>
+                                    Options d'affichage
+                                </a>
+                                <a href="javascript::void(0)" class="dropdown-item open-confirm-modal" value="1">
+                                    <img src="/Monlabo/public/images/liste-icon.png" alt=""> Liste
+                                </a>
+                                <a href="javascript::void(0)" class="dropdown-item open-confirm-modal" value="2">
+                                    <img src="/Monlabo/public/images/block-icon.png" alt=""> Block
+                                </a>
+                                <hr/>
+                                <a href="javascript::void(0)" class="dropdown-item open-confirm-modal" value="2">
+                                    Nom croissant
+                                </a>
+                                <a href="javascript::void(0)" class="dropdown-item open-confirm-modal" value="2">
+                                    Montant croissant
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-6 text-right">
+                        <span class="stats-page-descript">Tous les Apprenants (300) <a href=""><img src="/Monlabo/public/images/icon-refresh.png"/></a></span>
+                    </div>
+                </div>
+
+                <div class="card-dash-csu apprenants-group-1">
+                    <div class="table-responsive-vertical shadow-z-1" style="box-shadow:0px 0px 2px rgba(0,0,0,0.0005);">
+                      <table id="table" class="table table-hover table-mc-light-blue" style="margin: 0px 0px 15px 0px;">
+                     <thead>
+                     <tr>
+                       <th>
+                            <div class="mb-1">
+                                <div class="br-checkbox">
+                                    <input id="checkbox-ind1" name="checkbox-ind1" type="checkbox" aria-label="TITRE" checked="checked" indeterminate="indeterminate" data-parent="check-01">
+                                    <label for="checkbox-ind1">Nom</label>
+                                </div>
+                            </div>
+                        </th>
+                       <th>Prenom</th>
+                       <th>Contact</th>
+                       <th>Réservation (Heures)</th>
+                       <th>Montant versé (Euro) </th>
+                       <th>Action</th>
+                     </tr>
+                     </thead>
+                     <tbody>
+
+                       <tr>
+                         <td data-title="Nom">
+                            <div class="mb-1">
+                                <div class="br-checkbox">
+                                    <input id="checkbox-01" name="checkbox-01" type="checkbox" aria-label="Stephanie" checked="checked" data-child="check-01">
+                                    <label for="checkbox-01">Stephanie</label>
+                                </div>
+                            </div>
+                         </td>
+                         <td data-title="Prenom">Nobody</td>
+                         <td data-title="Contacts">
+                            6 01 23 45 67
+                            <div>nom@email.com</div>
+                         </td>
+                         <td>20</td>
+                         <td>800</td>
+
+                         <td data-title="Action" style="white-space: nowrap;" class="text-right">
+                            <a href="/Monlabo/gerant/detailmoniteur.html" class="icon-action-tr">
+                                <img src="/Monlabo/public/images/eye-open.png" alt="">
+                            </a>
+                            <a href="/Monlabo/gerant/modifiermoniteur.html" class="icon-action-tr">
+                                <img src="/Monlabo/public/images/icon-edit.png" alt="">
+                            </a>
+                         </td>
+                       </tr>
+
+                       <tr>
+                        <td data-title="Nom">
+                            <div class="mb-1">
+                                <div class="br-checkbox">
+                                  <input id="checkbox-02" name="checkbox-02" type="checkbox" aria-label="Oran" data-child="check-01">
+                                  <label for="checkbox-02">Oran</label>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-title="Prenom">Nobody</td>
+                         <td data-title="Contacts">
+                            6 01 23 45 67
+                            <div>nom@email.com</div>
+                         </td>
+                         <td>20</td>
+                         <td>800</td>
+                        <td data-title="Action" style="white-space: nowrap;" class="text-right">
+                            <a href="/Monlabo/gerant/detailmoniteur.html" class="icon-action-tr">
+                                <img src="/Monlabo/public/images/eye-open.png" alt="">
+                            </a>
+                            <a href="/Monlabo/gerant/modifiermoniteur.html" class="icon-action-tr">
+                                <img src="/Monlabo/public/images/icon-edit.png" alt="">
+                            </a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-title="Nom">
+                            <div class="mb-1">
+                                <div class="br-checkbox">
+                                  <input id="checkbox-03" name="checkbox-03" type="checkbox" aria-label="Jeramy" data-child="check-01">
+                                  <label for="checkbox-03">Jeramy</label>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-title="Prenom">Bogisich</td>
+                         <td data-title="Contacts">
+                            6 01 23 45 67
+                            <div>nom@email.com</div>
+                         </td>
+                         <td>20</td>
+                         <td>800</td>
+                        <td data-title="Action" style="white-space: nowrap;" class="text-right">
+                            <a href="/Monlabo/gerant/detailmoniteur.html" class="icon-action-tr">
+                                <img src="/Monlabo/public/images/eye-open.png" alt="">
+                            </a>
+                            <a href="/Monlabo/gerant/modifiermoniteur.html" class="icon-action-tr">
+                                <img src="/Monlabo/public/images/icon-edit.png" alt="">
+                            </a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-title="Nom">
+                            <div class="mb-1">
+                                <div class="br-checkbox">
+                                  <input id="checkbox-04" name="checkbox-04" type="checkbox" aria-label="Jasen" data-child="check-01">
+                                  <label for="checkbox-04">Jasen</label>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-title="Prenom">Lebsack</td>
+                         <td data-title="Contacts">
+                            6 01 23 45 67
+                            <div>nom@email.com</div>
+                         </td>
+                         <td>20</td>
+                         <td>800</td>
+
+                        <td data-title="Action" style="white-space: nowrap;" class="text-right">
+                            <a href="" class="icon-action-tr">
+                                <img src="/Monlabo/public/images/eye-open.png" alt="">
+                            </a>
+                            <a href="" class="icon-action-tr">
+                                <img src="/Monlabo/public/images/icon-edit.png" alt="">
+                            </a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-title="Nom">
+                            <div class="mb-1">
+                                <div class="br-checkbox">
+                                  <input id="checkbox-05" name="checkbox-05" type="checkbox" aria-label="Jasen" data-child="check-01">
+                                  <label for="checkbox-05">Jasen</label>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-title="Prenom">Lebsack</td>
+                         <td data-title="Contacts">
+                            6 01 23 45 67
+                            <div>nom@email.com</div>
+                         </td>
+                         <td>20</td>
+                         <td>800</td>
+
+                        <td data-title="Action" style="white-space: nowrap;" class="text-right">
+                            <a href="" class="icon-action-tr">
+                                <img src="/Monlabo/public/images/eye-open.png" alt="">
+                            </a>
+                            <a href="/Monlabo/gerant/modifiermoniteur.html" class="icon-action-tr">
+                                <img src="/Monlabo/public/images/icon-edit.png" alt="">
+                            </a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-title="Nom">
+                            <div class="mb-1">
+                                <div class="br-checkbox">
+                                  <input id="checkbox-06" name="checkbox-06" type="checkbox" aria-label="Jasen" data-child="check-01">
+                                  <label for="checkbox-06">Jasen</label>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-title="Prenom">Lebsack</td>
+                         <td data-title="Contacts">
+                            6 01 23 45 67
+                            <div>nom@email.com</div>
+                         </td>
+                         <td>20</td>
+                         <td>800</td>
+
+                        <td data-title="Action" style="white-space: nowrap;" class="text-right">
+                            <a href="" class="icon-action-tr">
+                                <img src="/Monlabo/public/images/eye-open.png" alt="">
+                            </a>
+                            <a href="/Monlabo/gerant/modifiermoniteur.html" class="icon-action-tr">
+                                <img src="/Monlabo/public/images/icon-edit.png" alt="">
+                            </a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-title="Nom">
+                            <div class="mb-1">
+                                <div class="br-checkbox">
+                                  <input id="checkbox-07" name="checkbox-07" type="checkbox" aria-label="Jasen" data-child="check-01">
+                                  <label for="checkbox-07">Jasen</label>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-title="Prenom">Lebsack</td>
+                         <td data-title="Contacts">
+                            6 01 23 45 67
+                            <div>nom@email.com</div>
+                         </td>
+                         <td>20</td>
+                         <td>800</td>
+
+                        <td data-title="Action" style="white-space: nowrap;" class="text-right">
+                            <a href="" class="icon-action-tr">
+                                <img src="/Monlabo/public/images/eye-open.png" alt="">
+                            </a>
+                            <a href="/Monlabo/gerant/modifiermoniteur.html" class="icon-action-tr">
+                                <img src="/Monlabo/public/images/icon-edit.png" alt="">
+                            </a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td data-title="Nom">
+                            <div class="mb-1">
+                                <div class="br-checkbox">
+                                  <input id="checkbox-08" name="checkbox-08" type="checkbox" aria-label="Jasen" data-child="check-01">
+                                  <label for="checkbox-08">Jasen</label>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-title="Prenom">Lebsack</td>
+                         <td data-title="Contacts">
+                            6 01 23 45 67
+                            <div>nom@email.com</div>
+                         </td>
+                         <td>20</td>
+                         <td>800</td>
+
+                        <td data-title="Action" style="white-space: nowrap;" class="text-right">
+                            <a href="" class="icon-action-tr">
+                                <img src="/Monlabo/public/images/eye-open.png" alt="">
+                            </a>
+                            <a href="/Monlabo/gerant/modifiermoniteur.html" class="icon-action-tr">
+                                <img src="/Monlabo/public/images/icon-edit.png" alt="">
+                            </a>
+                        </td>
+                      </tr>
+
+
+                     </tbody>
+                    </table>
+                    </div>
+                </div>
+
+                <div class="apprenants-group-2" style="display: none;">
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card-person">
+
+                                <div class="row">
+                                    <div class="col-md-5 col-5">
+                                        <img src="/Monlabo/public/images/Profile-pic.png" alt="" style="height: 80px; border-radius: 50%;">
+                                    </div>
+                                    <div class="col-md-7 col-7">
+                                        <div class="btn-group dropdown-prfl" role="group" style="float: right;">
+                                            <a href="javascript::void(0)" id="btnGroupDrop1" style="line-height: 25px;">
+                                                <img src="/Monlabo/public/images/icon-ellipse-v.png" alt="" style="margin-right: 5px;">
+                                            </a>
+                                            <div class="dropdown-content-prfl" style="right: 0px;">
+                                                <a href="javascript::void(0)" class="dropdown-item">
+                                                    Modifier <img src="/Monlabo/public/images/edit.png" alt="" class="float-right" style="height: 15px;">
+                                                </a>
+                                                <a href="javascript::void(0)" class="dropdown-item open-confirm-modal">
+                                                    Supprimer <img src="/Monlabo/public/images/delete-icon.png" alt="" class="float-right" style="height: 15px;">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row mt-2">
+                                    <div class="col-md-3 col-4">
+                                        <div class="label_input">Nom</div>
+                                    </div>
+                                    <div class="col-md-3 col-9">
+                                        <h3 class="sub-title-card text-left">Leslie </h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 col-4">
+                                        <div class="label_input">Prenom</div>
+                                    </div>
+                                    <div class="col-md-3 col-9">
+                                        <h3 class="sub-title-card text-left">Warren </h3>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-2 mb-3">
+                                    <div class="col-md-6 col-6">
+                                        <h3 class="sub-title-card text-left">20 Heures</h3>
+                                        <div class="libele-param-enrole">Total de réservations</div>
+                                    </div>
+                                    <div class="col-md-6 col-6">
+                                        <h3 class="sub-title-card text-left">800 Euros</h3>
+                                        <div class="libele-param-enrole">Montant total versé</div>
+                                    </div>
+                                </div>
+                                <h3 class="sub-title-card text-left"><img src="/Monlabo/public/images/phone-number.png" alt="" style="height: 30px; margin-right: 7px;"> 6 01 23 45 67</h3>
+                                <h3 class="sub-title-card text-left"><img src="/Monlabo/public/images/icon-envelop.png" alt="" style="height: 30px; margin-right: 7px;"> nom@email.com</h3>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card-person">
+
+                                <div class="row">
+                                    <div class="col-md-5 col-5">
+                                        <img src="/Monlabo/public/images/Profile-pic.png" alt="" style="height: 80px; border-radius: 50%;">
+                                    </div>
+                                    <div class="col-md-7 col-7">
+                                        <div class="btn-group dropdown-prfl" role="group" style="float: right;">
+                                            <a href="javascript::void(0)" id="btnGroupDrop1" style="line-height: 25px;">
+                                                <img src="/Monlabo/public/images/icon-ellipse-v.png" alt="" style="margin-right: 5px;">
+                                            </a>
+                                            <div class="dropdown-content-prfl" style="right: 0px;">
+                                                <a href="javascript::void(0)" class="dropdown-item">
+                                                    Modifier <img src="/Monlabo/public/images/edit.png" alt="" class="float-right" style="height: 15px;">
+                                                </a>
+                                                <a href="javascript::void(0)" class="dropdown-item open-confirm-modal">
+                                                    Supprimer <img src="/Monlabo/public/images/delete-icon.png" alt="" class="float-right" style="height: 15px;">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row mt-2">
+                                    <div class="col-md-3 col-4">
+                                        <div class="label_input">Nom</div>
+                                    </div>
+                                    <div class="col-md-3 col-9">
+                                        <h3 class="sub-title-card text-left">Leslie </h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 col-4">
+                                        <div class="label_input">Prenom</div>
+                                    </div>
+                                    <div class="col-md-3 col-9">
+                                        <h3 class="sub-title-card text-left">Warren </h3>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-2 mb-3">
+                                    <div class="col-md-6 col-6">
+                                        <h3 class="sub-title-card text-left">20 Heures</h3>
+                                        <div class="libele-param-enrole">Total de réservations</div>
+                                    </div>
+                                    <div class="col-md-6 col-6">
+                                        <h3 class="sub-title-card text-left">800 Euros</h3>
+                                        <div class="libele-param-enrole">Montant total versé</div>
+                                    </div>
+                                </div>
+                                <h3 class="sub-title-card text-left"><img src="/Monlabo/public/images/phone-number.png" alt="" style="height: 30px; margin-right: 7px;"> 6 01 23 45 67</h3>
+                                <h3 class="sub-title-card text-left"><img src="/Monlabo/public/images/icon-envelop.png" alt="" style="height: 30px; margin-right: 7px;"> nom@email.com</h3>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card-person">
+
+                                <div class="row">
+                                    <div class="col-md-5 col-5">
+                                        <img src="/Monlabo/public/images/Profile-pic.png" alt="" style="height: 80px; border-radius: 50%;">
+                                    </div>
+                                    <div class="col-md-7 col-7">
+                                        <div class="btn-group dropdown-prfl" role="group" style="float: right;">
+                                            <a href="javascript::void(0)" id="btnGroupDrop1" style="line-height: 25px;">
+                                                <img src="/Monlabo/public/images/icon-ellipse-v.png" alt="" style="margin-right: 5px;">
+                                            </a>
+                                            <div class="dropdown-content-prfl" style="right: 0px;">
+                                                <a href="javascript::void(0)" class="dropdown-item">
+                                                    Modifier <img src="/Monlabo/public/images/edit.png" alt="" class="float-right" style="height: 15px;">
+                                                </a>
+                                                <a href="javascript::void(0)" class="dropdown-item open-confirm-modal">
+                                                    Supprimer <img src="/Monlabo/public/images/delete-icon.png" alt="" class="float-right" style="height: 15px;">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row mt-2">
+                                    <div class="col-md-3 col-4">
+                                        <div class="label_input">Nom</div>
+                                    </div>
+                                    <div class="col-md-3 col-9">
+                                        <h3 class="sub-title-card text-left">Leslie </h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 col-4">
+                                        <div class="label_input">Prenom</div>
+                                    </div>
+                                    <div class="col-md-3 col-9">
+                                        <h3 class="sub-title-card text-left">Warren </h3>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-2 mb-3">
+                                    <div class="col-md-6 col-6">
+                                        <h3 class="sub-title-card text-left">20 Heures</h3>
+                                        <div class="libele-param-enrole">Total de réservations</div>
+                                    </div>
+                                    <div class="col-md-6 col-6">
+                                        <h3 class="sub-title-card text-left">800 Euros</h3>
+                                        <div class="libele-param-enrole">Montant total versé</div>
+                                    </div>
+                                </div>
+                                <h3 class="sub-title-card text-left"><img src="/Monlabo/public/images/phone-number.png" alt="" style="height: 30px; margin-right: 7px;"> 6 01 23 45 67</h3>
+                                <h3 class="sub-title-card text-left"><img src="/Monlabo/public/images/icon-envelop.png" alt="" style="height: 30px; margin-right: 7px;"> nom@email.com</h3>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card-person">
+
+                                <div class="row">
+                                    <div class="col-md-5 col-5">
+                                        <img src="/Monlabo/public/images/Profile-pic.png" alt="" style="height: 80px; border-radius: 50%;">
+                                    </div>
+                                    <div class="col-md-7 col-7">
+                                        <div class="btn-group dropdown-prfl" role="group" style="float: right;">
+                                            <a href="javascript::void(0)" id="btnGroupDrop1" style="line-height: 25px;">
+                                                <img src="/Monlabo/public/images/icon-ellipse-v.png" alt="" style="margin-right: 5px;">
+                                            </a>
+                                            <div class="dropdown-content-prfl" style="right: 0px;">
+                                                <a href="javascript::void(0)" class="dropdown-item">
+                                                    Modifier <img src="/Monlabo/public/images/edit.png" alt="" class="float-right" style="height: 15px;">
+                                                </a>
+                                                <a href="javascript::void(0)" class="dropdown-item open-confirm-modal">
+                                                    Supprimer <img src="/Monlabo/public/images/delete-icon.png" alt="" class="float-right" style="height: 15px;">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row mt-2">
+                                    <div class="col-md-3 col-4">
+                                        <div class="label_input">Nom</div>
+                                    </div>
+                                    <div class="col-md-3 col-9">
+                                        <h3 class="sub-title-card text-left">Leslie </h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 col-4">
+                                        <div class="label_input">Prenom</div>
+                                    </div>
+                                    <div class="col-md-3 col-9">
+                                        <h3 class="sub-title-card text-left">Warren </h3>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-2 mb-3">
+                                    <div class="col-md-6 col-6">
+                                        <h3 class="sub-title-card text-left">20 Heures</h3>
+                                        <div class="libele-param-enrole">Total de réservations</div>
+                                    </div>
+                                    <div class="col-md-6 col-6">
+                                        <h3 class="sub-title-card text-left">800 Euros</h3>
+                                        <div class="libele-param-enrole">Montant total versé</div>
+                                    </div>
+                                </div>
+                                <h3 class="sub-title-card text-left"><img src="/Monlabo/public/images/phone-number.png" alt="" style="height: 30px; margin-right: 7px;"> 6 01 23 45 67</h3>
+                                <h3 class="sub-title-card text-left"><img src="/Monlabo/public/images/icon-envelop.png" alt="" style="height: 30px; margin-right: 7px;"> nom@email.com</h3>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card-person">
+
+                                <div class="row">
+                                    <div class="col-md-5 col-5">
+                                        <img src="/Monlabo/public/images/Profile-pic.png" alt="" style="height: 80px; border-radius: 50%;">
+                                    </div>
+                                    <div class="col-md-7 col-7">
+                                        <div class="btn-group dropdown-prfl" role="group" style="float: right;">
+                                            <a href="javascript::void(0)" id="btnGroupDrop1" style="line-height: 25px;">
+                                                <img src="/Monlabo/public/images/icon-ellipse-v.png" alt="" style="margin-right: 5px;">
+                                            </a>
+                                            <div class="dropdown-content-prfl" style="right: 0px;">
+                                                <a href="javascript::void(0)" class="dropdown-item">
+                                                    Modifier <img src="/Monlabo/public/images/edit.png" alt="" class="float-right" style="height: 15px;">
+                                                </a>
+                                                <a href="javascript::void(0)" class="dropdown-item open-confirm-modal">
+                                                    Supprimer <img src="/Monlabo/public/images/delete-icon.png" alt="" class="float-right" style="height: 15px;">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row mt-2">
+                                    <div class="col-md-3 col-4">
+                                        <div class="label_input">Nom</div>
+                                    </div>
+                                    <div class="col-md-3 col-9">
+                                        <h3 class="sub-title-card text-left">Leslie </h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 col-4">
+                                        <div class="label_input">Prenom</div>
+                                    </div>
+                                    <div class="col-md-3 col-9">
+                                        <h3 class="sub-title-card text-left">Warren </h3>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-2 mb-3">
+                                    <div class="col-md-6 col-6">
+                                        <h3 class="sub-title-card text-left">20 Heures</h3>
+                                        <div class="libele-param-enrole">Total de réservations</div>
+                                    </div>
+                                    <div class="col-md-6 col-6">
+                                        <h3 class="sub-title-card text-left">800 Euros</h3>
+                                        <div class="libele-param-enrole">Montant total versé</div>
+                                    </div>
+                                </div>
+                                <h3 class="sub-title-card text-left"><img src="/Monlabo/public/images/phone-number.png" alt="" style="height: 30px; margin-right: 7px;"> 6 01 23 45 67</h3>
+                                <h3 class="sub-title-card text-left"><img src="/Monlabo/public/images/icon-envelop.png" alt="" style="height: 30px; margin-right: 7px;"> nom@email.com</h3>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card-person">
+
+                                <div class="row">
+                                    <div class="col-md-5 col-5">
+                                        <img src="/Monlabo/public/images/Profile-pic.png" alt="" style="height: 80px; border-radius: 50%;">
+                                    </div>
+                                    <div class="col-md-7 col-7">
+                                        <div class="btn-group dropdown-prfl" role="group" style="float: right;">
+                                            <a href="javascript::void(0)" id="btnGroupDrop1" style="line-height: 25px;">
+                                                <img src="/Monlabo/public/images/icon-ellipse-v.png" alt="" style="margin-right: 5px;">
+                                            </a>
+                                            <div class="dropdown-content-prfl" style="right: 0px;">
+                                                <a href="javascript::void(0)" class="dropdown-item">
+                                                    Modifier <img src="/Monlabo/public/images/edit.png" alt="" class="float-right" style="height: 15px;">
+                                                </a>
+                                                <a href="javascript::void(0)" class="dropdown-item open-confirm-modal">
+                                                    Supprimer <img src="/Monlabo/public/images/delete-icon.png" alt="" class="float-right" style="height: 15px;">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row mt-2">
+                                    <div class="col-md-3 col-4">
+                                        <div class="label_input">Nom</div>
+                                    </div>
+                                    <div class="col-md-3 col-9">
+                                        <h3 class="sub-title-card text-left">Leslie </h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 col-4">
+                                        <div class="label_input">Prenom</div>
+                                    </div>
+                                    <div class="col-md-3 col-9">
+                                        <h3 class="sub-title-card text-left">Warren </h3>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-2 mb-3">
+                                    <div class="col-md-6 col-6">
+                                        <h3 class="sub-title-card text-left">20 Heures</h3>
+                                        <div class="libele-param-enrole">Total de réservations</div>
+                                    </div>
+                                    <div class="col-md-6 col-6">
+                                        <h3 class="sub-title-card text-left">800 Euros</h3>
+                                        <div class="libele-param-enrole">Montant total versé</div>
+                                    </div>
+                                </div>
+                                <h3 class="sub-title-card text-left"><img src="/Monlabo/public/images/phone-number.png" alt="" style="height: 30px; margin-right: 7px;"> 6 01 23 45 67</h3>
+                                <h3 class="sub-title-card text-left"><img src="/Monlabo/public/images/icon-envelop.png" alt="" style="height: 30px; margin-right: 7px;"> nom@email.com</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row mt-5">
+                    <div class="col-md-6">
+                        1-20 sur 48
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <div class="frame float-right">
+                            <div class="btn-bar">
+                              <div class="buttons">
+                                <div class="btn scroll disabled" page="prev">
+                                    <svg class="icon" width="16.101" height="15.903" viewBox="0 0 16.101 15.903">
+                                      <path d="M-80,22l16.1-7.876L-66.968,22l3.069,8.027Z" transform="translate(80 -14.124)"></path>
+                                    </svg>
+                                  </div>
+                                <div class="btn active" page="1">1</div>
+                                <div class="btn" page="2">2</div>
+                                <div class="btn" page="3">3</div>
+                                <div class="btn" page="4">4</div>
+                                <div class="btn" page="5">5</div>
+                                <div class="btn" page="6">6</div>
+                                <div class="btn" page="3">3</div>
+                                <div class="btn" page="4">4</div>
+                                <div class="btn" page="5">5</div>
+                                <div class="btn" page="6">6</div>
+                                <div class="btn scroll" page="next">
+                                    <svg class="icon" width="16.101" height="15.903" viewBox="0 0 16.101 15.903">
+                                      <path d="M-80,22l16.1-7.876L-66.968,22l3.069,8.027Z" transform="translate(-63.899 30.027) rotate(180)"></path>
+                                    </svg>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+
+
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright © 2023 MonLabo &amp; Developed by <a href="#">Omnijobber</a></p>
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+    <script src="../public/js/global.min.js"></script>
+    <script src="../public/js/quixnav-init.js"></script>
+    <script src="../public/js/custom.min.js"></script>
+
+    <script src="../public/js/Chart.bundle.min.js"></script>
+
+    <script src="../public/js/core-init.js"></script>
+
+    
+    <script>
+        $('.link-item-dash').eq(4).addClass('activeItem');
+        $('.add-new-content').eq(3).show();
+
+        $('.open-confirm-modal').click(function(){
+            if($(this).attr('value') == 1)
+            {
+                $('.apprenants-group-1').show();
+                $('.apprenants-group-2').hide();
+            }else if($(this).attr('value') == 2)
+            {
+                $('.apprenants-group-1').hide();
+                $('.apprenants-group-2').show();
+            }
+        });
+    </script>
+</body>
+</html>
