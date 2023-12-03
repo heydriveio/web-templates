@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mon labo</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../public/images/logo-icon.png">
+    <link href="../public/css/style.css" rel="stylesheet">
+    <link href="../public/css/custom.css" rel="stylesheet">
+    <link href="../public/css/fontsaps.css" rel="stylesheet">
+    <link href="../public/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="/Monlabo/public/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <?php include 'header.html' ?>
+
+        <?php include 'left-sidebar.html' ?>
+        
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body" style="background: #F4FBFE; min-height: 700px!important;">
+            <!-- row -->
+            <div class="container-fluid">
+                
+               <div class="card-dash-csu">
+                    <div class="table-responsive-vertical shadow-z-1" style="box-shadow:0px 0px 2px rgba(0,0,0,0.0005);">
+                      <table id="table" class="table table-hover table-mc-light-blue" style="margin: 0px 0px 15px 0px;">
+                     <thead>
+                     <tr>
+                       <th>Ville</th>
+                       <th>Adresse</th>
+                       <th>Numéro</th>
+                       <th>Etat</th>
+                       <th>Action</th>
+                     </tr>
+                     </thead>
+                     <tbody>
+
+                       <tr>
+                         <td data-title="Ville">Poissy</td>
+                         <td data-title="Adresse">5 rue des Mortie 78 300 Poissy</td>
+                         <td data-title="Numéro">50025 785 454</td>
+                         <td data-title="Etat">
+                            <label class="switch1">
+                                <input type="checkbox">
+                                <span class="slider1 round1"></span>
+                            </label>
+                         </td>
+                         <td data-title="Action" style="white-space: nowrap;" class="text-right">
+                            <a href="/Monlabo/gerant/detailagence.html" class="icon-action-tr">
+                                <img src="/Monlabo/public/images/eye-open.png" alt="">
+                            </a>
+                            <a href="/Monlabo/gerant/updateagence.html" class="icon-action-tr">
+                                <img src="/Monlabo/public/images/icon-edit.png" alt="">
+                            </a>
+                         </td>
+                       </tr>
+
+
+
+                     </tbody>
+                    </table>
+                    </div>
+                </div>
+
+                
+
+            </div>
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+
+
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright © 2023 MonLabo &amp; Developed by <a href="#">Omnijobber</a></p>
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+    <script src="../public/js/global.min.js"></script>
+    <script src="../public/js/quixnav-init.js"></script>
+    <script src="../public/js/custom.min.js"></script>
+
+    <script src="../public/js/Chart.bundle.min.js"></script>
+
+    <script src="../public/js/core-init.js"></script>
+
+    
+    <script>
+        $('.link-item-dash').eq(7).addClass('activeItem');
+        //$('.add-new-content').eq(4).show();
+    </script>
+</body>
+</html>
