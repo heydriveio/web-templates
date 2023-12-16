@@ -21,8 +21,8 @@
     <link href="/Monlabo/public/css/bootstrap.min.css" rel="stylesheet">
 </head> 
 <body>
-<div class="my-login-page">
-    <section class="main-w3ls">
+<div class="my-login-page" >
+    <section class="main-w3ls" >
     
     <div class="bottom-grid">
         <div class="logo-w3ls">
@@ -31,27 +31,10 @@
     </div>
     <div class="content-w3ls">
         <div class="text-center icon-w3ls">
-            <h3 style="
-            font-family: HurmeGeometricSans1;
-            font-size: 28px;
-            font-weight: 600;
-            line-height: 35px;
-            letter-spacing: 0em;
-            text-align: center;
-            color: #fff;
-            ">
+            <h3 class="connexion-title">
                 Connexion
             </h3>
-
-            <div class="mt-3" style="
-            font-family: HurmeGeometricSans1;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 20px;
-            letter-spacing: 0em;
-            text-align: center;
-            color: #fff;
-            ">Connecter vous pour accéder à votre espace sécurisé </div>
+            <div class="mt-3 connexion-subtitle">Connecter vous pour accéder à votre espace sécurisé </div>
         </div>
 
         <div class="content-bottom">
@@ -61,6 +44,9 @@
                     <div class="wthree-field">
                         <input name="__username" id="validationDefaultUsername" type="text" value="" placeholder="Username" required>
                     </div>
+                </div>
+                <div class="alert alert-danger" style="border-radius: 40px;">
+                    Username invalide
                 </div>
                 <div class="field-group">
                     <span class="fa fa-lock" aria-hidden="true"></span>
@@ -82,20 +68,24 @@
                     <li class="clearfix"></li>
                 </ul>
                 
-                <ul class="list-login-bottom" style="margin-top: 20px;
-                display: inline-block;
-                text-align: center;
-                width: 100%;">
+                <ul class="list-login-bottom forgot-link">
                     <li class="">
-                        <a href="/CRM/bo/commercial/home.html" class="" style="text-transform: capitalize;">Mot de passe oublié ?</a>
+                        <a href="/CRM/bo/commercial/home.html" class="" style="text-transform: capitalize;">Mot de passe oublié ?</a> <a href="forgotpass.html" style="text-transform: capitalize; color: #F8C12C;">Cliquez ici</a>
                     </li>
                     <li class="clearfix"></li>
                 </ul>
             </form>
+            <div class="text-center">
+                Ou
+            </div>
+            <div class="text-center mt-3">
+                <a href="inscription.html" style="font-family: HurmeGeometricSans1;">S'inscrire</a>
+            </div>
         </div>
+        
     </div>
     
-    <div class="copyright-login">
+    <div class="copyright-login" style="font-family: HurmeGeometricSans1;">
         <div class="container">
             <span class="confidentiality">
                 <a href="">CGU</a>
@@ -107,6 +97,9 @@
 
     </section>
 
+    <?php include '2famodal.html' ?>
+    <?php include '2faconfirmmodal.html' ?>
+
     <script src="/Monlabo/public/js/global.min.js"></script>
     <script src="/Monlabo/public/js/quixnav-init.js"></script>
     <script src="/Monlabo/public/js/custom.min.js"></script>
@@ -115,17 +108,34 @@
     <script type="text/javascript">
 
         $('form.my-login-validation').on('submit', function(){
-          if($('#validationDefaultUsername').val() == 'gerant')
-          {
-            document.location.href= '/Monlabo/gerant/index.html';
-          }else if($('#validationDefaultUsername').val() == 'admin')
-          {
-            document.location.href= '/Monlabo/admin/index.html';
-          }else{
-            alert('Echec ! Login invalide.')
-          }
-          return false;
+            $('#newFile').modal('show');
+            return false;
         });
+
+        $('.open-confirm-modal').on('click', function(){ 
+            $('#newFile').modal('hide');
+
+            $('#newConfirmModal').modal('show');
+        })
+
+        $('.open-modal-method').on('click', function(){
+            $('#newConfirmModal').modal('hide');
+
+            $('#newFile').modal('show');
+        })
+
+        $('form.submit-code').on('submit', function(){
+            if($('#confirmDefaultCode').val() == 'gerant')
+            {
+                document.location.href= '/Monlabo/gerant/index.html';
+            }else if($('#confirmDefaultCode').val() == 'admin')
+            {
+                document.location.href= '/Monlabo/admin/index.html';
+            }else{
+                alert('Echec ! Login invalide.')
+            }
+            return false;
+        })
     
     </script>
 </div>

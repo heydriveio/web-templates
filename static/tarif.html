@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mon labo</title>
+    <!-- Favicon icon -->
+    <link href="/Monlabo/public/css/style.css" rel="stylesheet">
+    <link href="/Monlabo/public/css/custom.css" rel="stylesheet">
+    <link href="/Monlabo/public/css/fontsaps.css" rel="stylesheet">
+    <link href="/Monlabo/public/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="/Monlabo/public/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body style="margin: 0px;">
+
+  <?php include 'menu.html' ?>
+
+    <div class="container">
+        <section class="page-header">
+            <h3 style="color: #FFFFFF;">Nos Tarifs</h3>
+            <div>Vous êtes à la recherche d'une solution complète et abordable pour la gestion de votre auto-école ? Ne cherchez pas plus loin. HeyDrive est la!</div>
+        </section>
+
+        <div class="row mt-5 mb-5">
+            <div class="col-md-12 text-center">
+                <h3 class="font-title text-center">Une seule formule</h3>
+            </div>
+            <div class="col-md-6 offset-md-3">
+                <div class="card-paiement">
+                    <h3 class="paiement-package">Access</h3>
+                    <div class="font-descript text-center">à partir de </div>
+                    <div class="text-center mb-3 mt-3 tarif-amount">
+                        <strong>50€</strong> <span>HT/mois</span>
+                    </div>
+
+                    <div class="">
+                        <strong class="tarif-item-descript"><span class="bi bi-check2"></span> Accès illimité.</strong>
+                        <div class="font-descript">Vous pouvez accéder à votre espace administrateur 24h/24 et 7j/7.</div>
+                    </div>
+                    <div class="mt-3">
+                        <strong class="tarif-item-descript"><span class="bi bi-check2"></span> Aucune commission</strong>
+                        <div class="font-descript">Aucun coup additionnel pour la prise de rendez-vous en ligne.</div>
+                    </div>
+                    <div class="mt-3">
+                        <strong class="tarif-item-descript"><span class="bi bi-check2"></span> Disponibilité sur tous vos canaux</strong>
+                        <div class="font-descript">Plateforme adaptée à tous les terminaux (ordinateurs, tablettes, smartphones, etc.).</div>
+                    </div>
+                    <div class="mt-3">
+                        <strong class="tarif-item-descript"><span class="bi bi-check2"></span> Evolutions et mises à jour offertes !</strong>
+                    </div>
+                    <div class="mt-3">
+                        <strong class="tarif-item-descript"><span class="bi bi-check2"></span> Formation à l'outil.</strong>
+                        <div class="font-descript">Nos experts vous forment gratuitement afin que vous soyez autonomes.</div>
+                    </div>
+                    <div class="mt-3">
+                        <strong class="tarif-item-descript"><span class="bi bi-check2"></span> Paiement en ligne sécurisé</strong>
+                        <div class="font-descript">Paiements et acomptes en ligne, sécurisés.</div>
+                    </div>
+                    <div class="mt-3">
+                        <strong class="tarif-item-descript"><span class="bi bi-check2"></span> Rappels automatiques.</strong>
+                        <div class="font-descript">Notifications (sms et emails) : confirmations, rappels et annulations de rendez-vous.</div>
+                    </div>
+                    <div class="mt-3">
+                        <strong class="tarif-item-descript"><span class="bi bi-check2"></span> Votre activité en chiffres</strong>
+                        <div class="font-descript">De nombreuses statistiques pour mieux piloter votre activité et booster votre chiffre d’affaires.</div>
+                    </div>
+
+                    <div class="text-center mt-5">
+                        <a class="btn btn-primary" href="/Monlabo/static/inscription.html" style="background: #0047D4; color: #fff;font-family: HurmeGeometricSans1; border: none;">Je me lance</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <?php include 'footer.html' ?>
+    <!--**********************************
+        Scripts
+    ***********************************-->
+
+    <script>
+        function menu()
+        {
+            var the_menu = document.getElementsByClassName("m_menu")[0];
+            the_menu.classList.toggle('open');
+        }
+
+        $(document).on('click', 'li', function() {
+          $('.current').removeClass('current');
+          $(this).addClass('current');
+        });
+        
+    </script>
+    
+    <script src="/Monlabo/public/js/global.min.js"></script>
+    <script src="/Monlabo/public/js/quixnav-init.js"></script>
+    <script src="/Monlabo/public/js/custom.min.js"></script>
+
+    <script src="/Monlabo/public/js/Chart.bundle.min.js"></script>
+    <script>
+        window.onload = (event) => {
+        $('.item-link-menu').eq(1).addClass('activ');
+        };
+    </script>
+</body>
+
+</html>

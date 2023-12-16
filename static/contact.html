@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mon labo</title>
+    <!-- Favicon icon -->
+    <link href="/Monlabo/public/css/style.css" rel="stylesheet">
+    <link href="/Monlabo/public/css/custom.css" rel="stylesheet">
+    <link href="/Monlabo/public/css/fontsaps.css" rel="stylesheet">
+    <link href="/Monlabo/public/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="/Monlabo/public/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body style="margin: 0px;">
+
+  <?php include 'menu.html' ?>
+
+    <div class="container">
+        <section class="page-header">
+            <h3 style="color: #FFFFFF;">Contact</h3>
+            <div>N'hésitez pas à utiliser le formulaire de contact ci-dessous pour nous envoyer un message directement. Nous vous répondrons dans les plus brefs délais. </div>
+        </section>
+
+        <div class="row mt-5 mb-5">
+            <div class="col-md-6 offset-md-3">
+                <div class="card-paiement">
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="nom_gerant" class="label_input">Nom</label>
+                            <div class="form-group">
+                                <input type="text" name="" id="nom_gerant" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="prenom_gerant" class="label_input">Prenom</label>
+                            <div class="form-group">
+                                <input type="text" name="" id="prenom_gerant" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="email_gerant" class="label_input">Email</label>
+                            <div class="form-group">
+                                <input type="text" name="" id="email_gerant" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="sujet_gerant" class="label_input">Sujet</label>
+                            <div class="form-group">
+                                <input type="text" name="" id="sujet_gerant" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="message_gerant" class="label_input">Message</label>
+                            <div class="form-group">
+                                <textarea name="" id="" class="form-control" rows="10"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 mt-3">
+                            <button class="btn btn-primary btn-block" style="background: #0047D4; color: #fff;font-family: HurmeGeometricSans1; border: none;">Envoyer</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <?php include 'footer.html' ?>
+    <!--**********************************
+        Scripts
+    ***********************************-->
+
+    <script>
+        function menu()
+        {
+            var the_menu = document.getElementsByClassName("m_menu")[0];
+            the_menu.classList.toggle('open');
+        }
+
+        $(document).on('click', 'li', function() {
+          $('.current').removeClass('current');
+          $(this).addClass('current');
+        });
+        
+    </script>
+    
+    <script src="/Monlabo/public/js/global.min.js"></script>
+    <script src="/Monlabo/public/js/quixnav-init.js"></script>
+    <script src="/Monlabo/public/js/custom.min.js"></script>
+
+    <script src="/Monlabo/public/js/Chart.bundle.min.js"></script>
+    <script>
+        window.onload = (event) => {
+            $('.item-link-menu').eq(2).addClass('activ');
+        };
+    </script>
+</body>
+
+</html>
