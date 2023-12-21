@@ -1056,6 +1056,7 @@
   padding: 2em 4em;
   border: 4px solid #fff;
   border-radius: 15px;
+  box-shadow: 0px 0px 10px 0px #BAE0FF; max-width: 100%;
 }
 ul.links-unordered-list li.active a {
   background: rgba(255, 255, 255, 0.05);
@@ -2610,7 +2611,7 @@ input[type="radio"]:checked {
   min-height: 174px;
   border-radius: 5px;
   border: 1px;
-  padding: 20px;
+  padding: 20px 40px;
   background: #fff;
   margin-bottom: 5px;
 }
@@ -2966,7 +2967,8 @@ input[type="radio"]:checked {
 }
 
 .card-paiement{
-  box-shadow: 0px 0px 5px 0px #00000040; border-radius: 10px; padding: 15px; min-height: 500px;
+  box-shadow: 0px 0px 5px 0px #00000040; border-radius: 10px; 
+  min-height: 500px;
 }
 .paiement-package{
   font-family: HurmeGeometricSans1;
@@ -3103,4 +3105,35 @@ transition: width 500ms ease-in-out;
 }
 .stepper-size{
   width: 600px; max-width: 100%; display: inline-block;
+}
+
+.main-w3ls:before{
+  background: #fff;
+}
+
+form .field-group{
+  background: #f4f4f4;
+  margin-bottom: 20px;
+  padding: 0px 10px 0px 0;
+  border-radius: 35px;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  -ms-border-radius: 35px;
+  -o-border-radius: 35px;
+  position: relative;
+}
+form .field-group span{
+  margin-top: -5px;
+}
+.slider-w3ls:before{
+  
+}
+.slider-w3ls {
+  background-color: #333;
+}
+.confirm-inscription{
+  font-family: HurmeGeometricSans1!important;
+}
+.confirm-inscription a{
+  color: #F8C12C!important;
 }
