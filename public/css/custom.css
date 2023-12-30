@@ -2618,6 +2618,15 @@ input[type="radio"]:checked {
 .card-paiement h3{
   line-height: 25px; margin: 0px; font-size: 31px; font-weight: 700;
 }
+.card-paiement .descItem2{
+  font-family: HurmeGeometricSans1;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 15px;
+}
 .gray-title{
   font-family: HurmeGeometricSans1;
   font-size: 22px;
@@ -3135,4 +3144,24 @@ form .field-group span{
 }
 .confirm-inscription a{
   color: #F8C12C!important;
+}
+
+.card-master{
+  box-shadow: 0px 0px 10px 0px #BAE0FF; padding: 15px; background: #fff;
+}
+.card-master h3{
+  font-size: 17px; font-family: HurmeGeometricSans1;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #858891;
+}
+.alert-rsvt{
+  min-width: 100px;
+  height: 23px;
+  padding: 2px 5px 2px 5px;
+  font-family: HurmeGeometricSans1;
+  text-align: center;
 }

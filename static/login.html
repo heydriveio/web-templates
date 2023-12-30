@@ -69,7 +69,7 @@
                 
                 <ul class="list-login-bottom forgot-link" style="padding-left: 0px; width: 100%;">
                     <li class="">
-                        <a href="/CRM/bo/commercial/home.html" class="dark-color" style="text-transform: capitalize;">Mot de passe oublié ?</a> <a href="forgotpass.html" class="ml-5" style="text-transform: capitalize; color: #F8C12C;">Cliquez ici</a>
+                        <a href="forgotpass.html" class="dark-color" style="text-transform: capitalize;">Mot de passe oublié ?</a> <a href="forgotpass.html" class="ml-5" style="text-transform: capitalize; color: #F8C12C;">Cliquez ici</a>
                     </li>
                     <li class="clearfix"></li>
                 </ul>
@@ -130,6 +130,9 @@
             }else if($('#confirmDefaultCode').val() == 'admin')
             {
                 document.location.href= '/Monlabo/admin/index.html';
+            }else if($('#confirmDefaultCode').val() == 'apprenant')
+            {
+                document.location.href= '/Monlabo/apprenant/index.html';
             }else{
                 alert('Echec ! Login invalide.')
             }
