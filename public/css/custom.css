@@ -3165,3 +3165,23 @@ form .field-group span{
   font-family: HurmeGeometricSans1;
   text-align: center;
 }
+
+.color-danger, .color-danger a{
+  color: #FC3E4D!important;
+}
+.color-warning, .color-warning a{
+  color: #EDB03D!important;
+}
+.color-info, .color-info a{
+  color: #4075DF!important;
+}
+.color-success, .color-success a{
+  color: #1AB846!important;
+}
+.card-notif{
+  box-shadow: 0px 0px 10px 0px #BAE0FF;
+  min-height: 117px;
+  padding: 15px 13px 15px 13px;
+  border-radius: 5px;
+  background: #fff;
+}
