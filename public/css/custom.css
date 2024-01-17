@@ -3185,3 +3185,19 @@ form .field-group span{
   border-radius: 5px;
   background: #fff;
 }
+.fc-toolbar-title{
+  color: #333!important;
+    text-align: center!important;
+    font-family: HurmeGeometricSans1!important;
+    font-size: 18px!important;
+    font-style: normal!important;
+    font-weight: 700!important;
+    line-height: normal!important;
+    text-transform: unset!important;
+}
+.fc-resourceTimelineDay-button, .fc-resourceTimelineWeek-button, .fc-resourceTimelineMonth-button, .fc-prev-button, .fc-next-button{
+  background: #E6E8EF!important;
+  font-family: HurmeGeometricSans1!important;
+  text-transform: unset!important;
+  color: #333!important;
+}

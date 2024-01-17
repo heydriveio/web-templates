@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Calendrier</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../public/images/logo-icon.png">
+    <link href="../public/css/style.css" rel="stylesheet">
+    <link href="../public/css/custom.css" rel="stylesheet">
+    <link href="../public/css/fontsaps.css" rel="stylesheet">
+    <link href="../public/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="/Monlabo/public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <?php include 'header.html' ?>
+
+        <?php include 'left-sidebar.html' ?>
+     
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body" style="background: #F4FBFE; min-height: 700px!important;">
+            <!-- row -->
+            <div class="container-fluid">
+
+                <div id='calendar' style="height: 90px;"></div>
+            
+            </div>
+        </div>
+
+        <div id="reservation" class="content" title="Basic dialog">
+            <h3>Add reservation</h3>
+            <h4 id="reserv_error" class="error"></h4>
+            <div onclick="close()" class="close-btn">
+            ×
+            </div>
+            <div class="form-group">
+            <label> Student : </label>
+            <select id="studentId">
+                <option  th:each="student : ${students}" th:value="${student.id}" th:inline="text">
+                [[${student.firstName}]] [[${student.lastName}]]
+                </option>
+            </select>
+            </div>
+            <div class="form-group">
+            <label> Date : </label>
+            <input type="date" id="date" class="form-control" />
+            </div>
+            <div class="form-group">
+            <label> Begin : </label>
+            <input type="time" id="begin" class="form-control" />
+            </div>
+            <div class="form-group">
+            <label> End : </label>
+            <input type="time" id="end" class="form-control" />
+            </div>
+            <button class="btn btn-primary" onclick="close()">Close</button>
+            <button id="add_reserv" class="btn btn-primary">Add Reservation</button>
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+
+
+        <?php include 'calendarmodal.html' ?>
+        <?php include 'calendarconfirmmodal.html' ?>
+        <?php include 'freemoniteurmodal.html' ?>
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright © 2023 MonLabo &amp; Developed by <a href="#">Omnijobber</a></p>
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+    <script src="../public/js/global.min.js"></script>
+    <script src="../public/js/quixnav-init.js"></script>
+    <script src="../public/js/custom.min.js"></script>
+
+    <script src="../public/js/Chart.bundle.min.js"></script>
+
+    <script src="../public/js/core-init.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.10/index.global.min.js'></script>
+    
+    <style>
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 300px;
+            text-align: center;
+            background-color: #e8eae6;
+            box-sizing: border-box;
+            padding: 10px;
+            z-index: 100;
+            display: none;
+            /*to hide popup initially*/
+        }
+    </style>
+
+    
+    <script>
+        $('.link-item-dash').eq(6).addClass('activeItem');
+        $('.add-new-content').eq(5).show();
+
+        $('.shadow_box_item a').click(function(){
+            $('.shadow_box_item a').removeClass('active_v');
+            $('.nav-tab-default').hide();
+            setTimeout(() => {
+                $(this).addClass('active_v');
+                $('.'+$(this).attr('target-attr')).show();
+            }, "100");
+        });
+
+        function close(){
+            $("#reservation").toggle();
+        }
+
+        $('.open-confirm-modal').on('click', function(){ 
+            $('#modalNewReservation').modal('hide');
+            $('#newConfirmModal').modal('show');
+            return false;
+        })
+
+        $('.add-new-task').click(function(){
+            $('#freeMonitorModal').modal('show');
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'resourceTimelineWeek',
+            resourceAreaHeaderContent: 'Drivers',
+            headerToolbar: {
+                left: 'prev,next',
+                center: 'title',
+                right: 'resourceTimelineDay,resourceTimelineWeek,resourceTimelineMonth'
+            },
+            locale: 'fr',
+            slotDuration: "00:30:00",
+            allDaySlot: false,
+            selectable: true,
+            selectOverlap: false,
+            resources: [
+                {
+                    id: 'a',
+                    title: 'Driver A',
+                    businessHours: {
+                        startTime: '10:00',
+                        endTime: '18:00'
+                    }
+                },
+                {
+                    id: 'b',
+                    title: 'Driver B',
+                    businessHours: {
+                        startTime: '11:00',
+                        endTime: '17:00',
+                        daysOfWeek: [ 1, 3, 5 ] // Mon,Wed,Fri
+                    }
+                },
+                {
+                    id: 'c',
+                    title: 'Driver C'
+                }
+            ],
+            events: [ // put the array in the `events` property
+                {
+                    title  : 'event1',
+                    start  : '12:30:00',
+                    end: '14:30:00',
+                    daysOfWeek: [ 1, 3, 5 ],
+                    resourceId: 'a'
+                },
+                {
+                    title  : 'event2',
+                    start  : '2024-01-09T09:30:00',
+                    end: '2024-01-09T11:30:00',
+                    resourceId: 'c'
+                },
+                {
+                    title  : 'event3',
+                    start  : '2024-01-10T09:30:00',
+                    end: '2024-01-10T11:30:00',
+                    resourceId: 'b'
+                }
+            ],
+            editable: true,
+            schedulerLicenseKey : 'CC-Attribution-NonCommercial-NoDerivatives',
+            select: function(){
+                //$("#reservation").toggle();
+                $('h1.over-title').html('Nouvelle réservation');
+                $('#modalNewReservation').modal('show');
+            },
+            eventClick: function(info) {
+                $('h1.over-title').html('Modifier cette évènement');
+                $('#modalNewReservation').modal('show');
+                //var modal = document.getElementById("myModal");
+                //modal.style.display = "block";
+                //document.getElementById("EventT").value = info.event.title;
+                //document.getElementById("StartD").value = info.event.startStr;
+                // document.getElementById("EndD").value = info.event.endStr;
+                var ddd = info.event.endStr;
+                if (ddd.length === 0) {
+                    //document.getElementById("EndD").value = info.event.startStr;
+                } else {
+                    //document.getElementById("EndD").value = info.event.endStr;
+                }
+            }
+        });
+        calendar.render();
+    });
+
+    </script>
+</body>
+</html>
