@@ -55,8 +55,8 @@
                     <div class="col-md-8">
                       <div class="nav__Tabs">
                         <ul>
-                            <li class="current"><a href="#"><span>Fonctionnalités Auto-écoles</span></a></li>
-                            <li class=""><a href="#"><span>Avantages pour les élèves</span></a></li>
+                            <li class="current iem-nawTab" value="1"><a href="#"><span>Fonctionnalités Auto-écoles</span></a></li>
+                            <li class="iem-nawTab" value="2"><a href="#"><span>Avantages pour les élèves</span></a></li>
                         </ul>
                       </div>
                     </div>
@@ -64,8 +64,10 @@
                 </div>
 
                 <div class="box-content-tabs">
-                    
-                  <div class="row pt-3">
+                  
+                  <div class="content-fonctions">
+
+                    <div class="row pt-3">
                       <div class="col-md-7">
                         
                         <div class="d-flex">
@@ -106,6 +108,54 @@
                       <div class="col-md-5">
                           <img src="/Monlabo/public/images/img-tab-1.png" alt=".." style="max-width: 100%;">
                       </div>
+                    </div>
+
+                  </div>
+                  
+                  <div class="content-avantages">
+                    <div class="row pt-3">
+
+                      <div class="col-md-5">
+                        <img src="/Monlabo/public/images/eleve-auto-ecole.png" alt=".." style="max-width: 100%;">
+                      </div>
+  
+                      <div class="col-md-7">
+                        
+                        <div class="d-flex">
+                          <div class="text-right col-img">
+                            <img src="/Monlabo/public/images/solar_calendar-line-duotone.png" alt=""/>
+                          </div>
+  
+                          <div class="col-content">
+                            <h3>Planification des leçons de conduite simplifiée</h3>
+                            <div>Avec MonLabo, vous pouvez planifier vos cours en quelques clics, où que vous soyez. Plus besoin de vous rendre à l'auto-école ou d'appeler pour réserver.</div>
+                          </div>
+                        </div>
+                        
+                        <div class="d-flex mt-3">
+                          <div class="text-right col-img">
+                            <img src="/Monlabo/public/images/fluent_alert-urgent-16-regular.png" alt=""/>
+                          </div>
+  
+                          <div class="col-content">
+                            <h3>Rappel & Notifications</h3>
+                            <div>Fini les oublis de rendez-vous !  Vous recevrez des rappels pour que vous puissiez suivre votre calendrier et ne manquer aucune séance d'apprentissage.</div>
+                          </div>
+                        </div>
+  
+                        <div class="d-flex mt-3">
+                          <div class="text-right col-img">
+                            <img src="/Monlabo/public/images/solar_clipboard-list-line-duotone.png" alt=""/>
+                          </div>
+  
+                          <div class="col-content">
+                            <h3>Suivi de votre progression</h3>
+                            <div>Vous pouvez consulter votre historique de cours à tout moment. Cela vous aide à rester motivé et à visualiser vos succès dans votre parcours de conduite.</div>
+                          </div>
+                        </div>
+  
+                      </div>
+                    </div>
                   </div>
 
                 </div>
@@ -213,24 +263,36 @@
         Scripts
     ***********************************-->
 
-    <script>
-        function menu()
-        {
-            var the_menu = document.getElementsByClassName("m_menu")[0];
-            the_menu.classList.toggle('open');
-        }
-
-        $(document).on('click', 'li', function() {
-          $('.current').removeClass('current');
-          $(this).addClass('current');
-        });
-    </script>
-    
     <script src="/Monlabo/public/js/global.min.js"></script>
     <script src="/Monlabo/public/js/quixnav-init.js"></script>
     <script src="/Monlabo/public/js/custom.min.js"></script>
 
     <script src="/Monlabo/public/js/Chart.bundle.min.js"></script>
+
+    <script>
+      $('.iem-nawTab').click(function(){
+        if($(this).attr('value') == 1)
+        {
+          $('.content-fonctions').show();
+          $('.content-avantages').hide();
+        }else{
+          $('.content-fonctions').hide();
+          $('.content-avantages').show();
+        }
+      });
+
+      function menu()
+      {
+          var the_menu = document.getElementsByClassName("m_menu")[0];
+          the_menu.classList.toggle('open');
+      }
+
+      $(document).on('click', 'li', function() {
+        $('.current').removeClass('current');
+        $(this).addClass('current');
+      });
+
+    </script>
 </body>
 
 </html>

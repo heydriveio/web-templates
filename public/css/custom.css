@@ -3201,3 +3201,6 @@ form .field-group span{
   text-transform: unset!important;
   color: #333!important;
 }
+.content-avantages{
+  display: none;
+}
